@@ -1,0 +1,46 @@
+body {
+
+font-family: 'Syne Mono', monospace, serif;
+margin: 0;
+background: radial-gradient(#457B9D, #1D3557);
+}
+
+* 
+{box-sizing: border-box;
+
+}
+
+html {
+    min-height: 100vh;
+}
+
+.page-title{
+
+color: #E63946;
+font-weight: 600;
+text-align: center;
+font-size: 4em;
+}
+
+.game-info-container {
+
+grid-column: 1 / -1;
+}
+
+.game-info{
+
+color: #A8DADC;
+font-size: 2em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px; 
+}
+
+.card {
+background-color: #A8DADC;
+height: 175px;
+width: 125px;
+}
