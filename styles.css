@@ -25,6 +25,8 @@ font-size: 4em;
 .game-info-container {
 
 grid-column: 1 / -1;
+display: flex;
+justify-content: space-between;
 }
 
 .game-info{
@@ -37,6 +39,8 @@ font-size: 2em;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px; 
+    margin: 50px;
+    justify-content: center;
 }
 
 .card {
