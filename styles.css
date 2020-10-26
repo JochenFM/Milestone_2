@@ -44,6 +44,8 @@ font-size: 2em;
     perspective: 500px;
 }
 
+
+
 .card {
 position: relative;
 height: 175px;
@@ -68,7 +70,10 @@ transform: scale(1);
     align-items: center;
     border-radius: 12px;
     border-width: 1px;
-    border-style: solid; 
+    border-style: solid;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out; 
 }
 
 
@@ -79,14 +84,16 @@ transform: rotateY(-180deg);
 }
 .card:hover .card-front{
 
-transform: rotateY(0);
+transform: rotateY(0)
 }
 
 
 .card-back {
 
     background-color: #A8DADC;
-    border-color:#E63946;
+    border: 2px solid #E63946;
+    
+
 
 }
 
@@ -137,20 +144,16 @@ transition: width 100ms ease-in-out, height 100ms ease-in-out;
 
 .card-front{
     transform: rotateY(180deg);
-    border-color: #F1FAEE;
-    
+    border: 2px solid #F1FAEE;
+    backface-visibility: hidden;
 }
 
 
 .card-value {
 
-transition: transform 100ms ease-in-out;
-transform: scale(.9);
-align-self: center;
 height: 100%;
 width: 100%;
+position: relative;
+border-radius: 12px;
 }
 
-.card-front:hover .card-value{
-    transform: scale(1);
-}
