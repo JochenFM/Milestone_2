@@ -45,9 +45,16 @@ font-size: 2em;
 
 .card {
 position: relative;
-background-color: #A8DADC;
 height: 175px;
 width: 125px;
+transform: scale(1);
+}
+
+
+.card:active {
+
+    transform: scale(.97);
+     transition: transform .2s;
 }
 
 .card-face {
@@ -58,6 +65,16 @@ width: 125px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid; 
+}
+
+
+.card-back {
+
+    background-color: #A8DADC;
+    border-color:#E63946;
 
 }
 
@@ -67,7 +84,14 @@ width: 125px;
 position: absolute;
 width: 47px;
 height: 47px;
+transition: width 100ms ease-in-out, height 100ms ease-in-out;
 
+}
+
+.card-back:hover .female-icon {
+
+    width: 52px;
+    height: 52px;
 }
 
 .female-icon-top-left{
@@ -92,6 +116,8 @@ height: 47px;
 
 .normaldistribution{
     align-self: center;
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 125px;
+    
 }
+
