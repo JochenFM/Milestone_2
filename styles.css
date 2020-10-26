@@ -44,7 +44,54 @@ font-size: 2em;
 }
 
 .card {
+position: relative;
 background-color: #A8DADC;
 height: 175px;
 width: 125px;
+}
+
+.card-face {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.bar-chart{
+
+position: absolute;
+width: 47px;
+height: 47px;
+
+}
+
+.bar-chart-top-left{
+    top: 0;
+    left: 0; 
+}
+
+.bar-chart-top-right{
+    top: 0;
+    right: 0; 
+
+}
+.bar-chart-bottom-left{
+    bottom: 0;
+    left: 0; 
+}
+
+.bar-chart-bottom-right{
+    bottom: 0;
+    right: 0; 
+}
+
+.female-icon{
+    align-self: flex-start;
+    width: 47px;
+    height: 47px;
 }
