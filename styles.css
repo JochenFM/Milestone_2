@@ -41,6 +41,7 @@ font-size: 2em;
     grid-gap: 10px; 
     margin: 50px;
     justify-content: center;
+    perspective: 500px;
 }
 
 .card {
@@ -71,6 +72,17 @@ transform: scale(1);
 }
 
 
+.card:hover .card-back{
+
+transform: rotateY(-180deg);
+
+}
+.card:hover .card-front{
+
+transform: rotateY(0);
+}
+
+
 .card-back {
 
     background-color: #A8DADC;
@@ -82,16 +94,16 @@ transform: scale(1);
 .female-icon{
 
 position: absolute;
-width: 47px;
-height: 47px;
+width: 37px;
+height: 37px;
 transition: width 100ms ease-in-out, height 100ms ease-in-out;
 
 }
 
 .card-back:hover .female-icon {
 
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
 }
 
 .female-icon-top-left{
@@ -121,3 +133,24 @@ transition: width 100ms ease-in-out, height 100ms ease-in-out;
     
 }
 
+
+
+.card-front{
+    transform: rotateY(180deg);
+    border-color: #F1FAEE;
+    
+}
+
+
+.card-value {
+
+transition: transform 100ms ease-in-out;
+transform: scale(.9);
+align-self: center;
+height: 100%;
+width: 100%;
+}
+
+.card-front:hover .card-value{
+    transform: scale(1);
+}
