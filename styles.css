@@ -62,7 +62,7 @@ width: 125px;
 }
 
 
-.bar-chart{
+.female-icon{
 
 position: absolute;
 width: 47px;
@@ -70,28 +70,28 @@ height: 47px;
 
 }
 
-.bar-chart-top-left{
+.female-icon-top-left{
     top: 0;
     left: 0; 
 }
 
-.bar-chart-top-right{
+.female-icon-top-right{
     top: 0;
     right: 0; 
 
 }
-.bar-chart-bottom-left{
+.female-icon-bottom-left{
     bottom: 0;
     left: 0; 
 }
 
-.bar-chart-bottom-right{
+.female-icon-bottom-right{
     bottom: 0;
     right: 0; 
 }
 
-.female-icon{
-    align-self: flex-start;
-    width: 47px;
-    height: 47px;
+.normaldistribution{
+    align-self: center;
+    height: 120px;
+    width: 120px;
 }
