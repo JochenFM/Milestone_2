@@ -211,3 +211,30 @@ to {
    background-color:rgba(0, 0, 0, .8);
    font-size: 10em; 
 }
+
+
+.btn {
+    font-family: 'Syne Mono', monospace, serif;
+    font-size: 2.5rem;
+    color: #E63946;
+    
+}
+
+.overlay-text p {
+
+    font-size: 4rem;
+}
+
+p {
+    display: block;
+
+
+}
+
+.prize-bio {
+
+   font-family: 'Syne Mono', monospace, serif;
+   line-height: 2rem;
+
+
+}
