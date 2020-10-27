@@ -12,6 +12,7 @@ background: radial-gradient(#457B9D, #1D3557);
 
 html {
     min-height: 100vh;
+    cursor: url("assets/cursors/FemaleIcon.cur"), auto;
 }
 
 .page-title{
@@ -53,6 +54,11 @@ width: 125px;
 transform: scale(1);
 }
 
+
+.card:hover {
+
+    cursor: url("assets/cursors/female_sci.cur"), auto;
+}
 
 .card:active {
 
