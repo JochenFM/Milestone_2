@@ -13,13 +13,25 @@
 </head>
 <body>
     <h1 class="page-title">Against the Odds: Women Trailblazers in Statistics</h1>
-    <div class ="game-container">
-        <div class ="game-info-container">
+    <h2 class ="lead"> Match the cards and beat the clock</h2>
+    <div class ="overlay-text">
+        Click to Start
+    </div>
+    <div id= "game-over-text" class ="overlay-text">
+        GAME OVER
+        <span class ="overlay-text-small">Click to Restart</span>
+    </div>
+    <div id= "victory-text" class ="overlay-text visible">
+        VICTORY
+        <span class ="overlay-text-small">Click to Restart</span>
+    </div>       
+        <div class ="game-container">
+            <div class ="game-info-container">
+                <div class= "game-info">
+                    Time <span id="time-remaining">100</span>
+                </div>
             <div class= "game-info">
-            Time <span id="time-remaining">100</span>
-            </div>
-            <div class= "game-info">
-            Flips <span id="flips">0</span>
+                Flips <span id="flips">0</span>
             </div>
         </div>
         <div class="card">
