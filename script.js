@@ -26,3 +26,22 @@ function ready() {
         });
     });
 }
+
+
+
+
+class AudioController {
+    constructor() {
+        this.bgMusic = new Audio('assets/sounds/bgMusic.wav');
+        this.flipSound = new Audio('assets/sounds/card-flip.wav');
+        this.matchSound = new Audio('assets/sounds/.wav');
+        this.victorySound = new Audio('assets/sounds/victory-fanfare.wav');
+        this.gameOverSound = new Audio('assets/sounds/');
+        this.bgMusic.loop = true;   
+    }
+
+    startMusic() {
+        this.bgMusic.play();
+        
+    }
+}
