@@ -205,19 +205,9 @@ animation-delay: .5s;
 }
 
 
-.overlay-text-small.visible {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    color: #E63946;
-    justify-content: center;
-    align-items: center;
-    z-index: 100; 
-    font-family: 'Syne Mono', monospace, serif;
-    transition: background-color 500ms, font-size 500ms;
+.overlay-text-small {
+   font-size: .3em;
+
 
 }
 
@@ -229,38 +219,46 @@ animation-delay: .5s;
 }
 
 
-.overlay-prize-text.visible {
-/* smaller and at the bottom */
+.overlay-text p {
+
+font-size: 5.5rem;
 }
 
-#prize-text{
 
-    display: none;
-    position: absolute;
+.prize-bio a{
+
     color: #E63946;
-    justify-content: center;
-    align-items: center;
-    z-index: 100; 
-    font-family: 'Syne Mono', monospace, serif;
-    transition: background-color 500ms, font-size 500ms;
-
 }
 
+
+/*.prize-content {
+
+}
 
 #restart-button {
 
+
+
 }
-
-#prize-button {
-
-    
+*/
+/* Responsive picture frame taken from https://codepen.io/dudleystorey/pen/yyZpeX */
+img.frame {
+  border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch; 
+  border-color: #f4be52;
+  border-style: inset;
+  border-width: 60px;
+  display: block;
+  width: 120%;
+  height: auto;
+  background-color: #F1FAEE;
+  margin: 0;
 }
 
 
 footer {
 
     margin: 0;
-    background-color: #E63946;
+    background-color: transparent;
     padding: 5px;
     color: black;
     text-align: center;
@@ -320,4 +318,7 @@ footer {
         align-items: center;
     }
 
-}
+  img.frame { 
+    border-width: 0px;
+    width: 100%; }
+    }
