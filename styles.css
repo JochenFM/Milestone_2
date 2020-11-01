@@ -205,8 +205,19 @@ animation-delay: .5s;
 }
 
 
-.overlay-text-small {
-    font-size: .3em;
+.overlay-text-small.visible {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #E63946;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; 
+    font-family: 'Syne Mono', monospace, serif;
+    transition: background-color 500ms, font-size 500ms;
 
 }
 
@@ -218,6 +229,44 @@ animation-delay: .5s;
 }
 
 
+.overlay-prize-text.visible {
+/* smaller and at the bottom */
+}
+
+#prize-text{
+
+    display: none;
+    position: absolute;
+    color: #E63946;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; 
+    font-family: 'Syne Mono', monospace, serif;
+    transition: background-color 500ms, font-size 500ms;
+
+}
+
+
+#restart-button {
+
+}
+
+#prize-button {
+
+    
+}
+
+
+footer {
+
+    margin: 0;
+    background-color: #E63946;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    padding: 10px, 0;
+    display: block;
+}
 
 .container-fluid {
 
@@ -227,18 +276,9 @@ animation-delay: .5s;
     margin-right: auto;
     margin-left: auto;
 
-
 }
 
 
-#footer {
-
-    margin: 0;
-    background-color: transparent;
-    color: #F1FAEE;
-    text-align: center;
-    padding: 10px, 0;
-}
 
 
 

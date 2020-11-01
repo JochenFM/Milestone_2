@@ -16,7 +16,7 @@
     <h2 class ="lead"> Match the cards and beat the clock!</h2>
     <!--Game Overlays-->
     
-    <div class ="overlay-text visible">
+    <div class ="overlay-text">
         Click to Start
     </div>
     <div id= "game-over-text" class ="overlay-text">
@@ -27,9 +27,9 @@
         VICTORY!
     <button type ="button" class= "btn" id= "prize-button">Click to view your Prize!</button>
     </div>
-    <!--Prize Overlay   
-    <div class ="overlay-text">
-        <p class= "prize-text"> Gertrude Mary Cox (1900-1978)</p>
+    <!--Prize Overlay--visible needs to go here after "overlay-prize-text"-->   
+    <div class ="overlay-prize-text">
+        <p id= "prize-text"> Gertrude Mary Cox (1900-1978)</p>
     <div class = "prize-content">
         <img src="assets/images/Gertrude-Cox.jpg">
     </div>
@@ -38,8 +38,8 @@
         Click<span> here</span> for more info on Gertrude Cox or...
         </a>
     </div>      
-    <button type= "button" class="btn">Restart</button>
-    </div> -->
+    <button type= "button" class="btn" id= "restart-button">Restart</button>
+    </div>
         <div class ="game-container">
             <div class ="game-info-container">
                 <div class= "game-info">
@@ -230,7 +230,7 @@
         </div>
     </div>
 <footer class= "container-fluid">
-    <h4> Copyright © Jochen Mayer 2020 </h4>
+    <h4>Copyright © 2020 Jochen F Mayer </h4>
 </footer>     
 </body>
 </html>
