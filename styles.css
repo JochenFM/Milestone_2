@@ -12,7 +12,7 @@ background: radial-gradient(#457B9D, #1D3557);
 
 html {
     min-height: 100vh;
-    cursor: url("assets/cursors/female_sci.cur"), default;
+    cursor: url(assets/cursors/female_sci.cur), auto;
 }
 
 .page-title{
@@ -176,22 +176,14 @@ border-radius: 12px;
 }
 
 
-/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL */
+/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 1) .card:hover needs to be changed back into .card.matched for JS*/
 
 .card:hover .card-vlaue{
 
 
 animation: 1s matchAnim ease-in-out;
-			animation-delay: .5s;
+animation-delay: .5s;
 
-
-@keyframes matchAnim {
-	0% { 
-		background: #E63946;
-	}
-	100% {
-		background: #A8DADC;
-	}
 }
 
 
@@ -202,20 +194,23 @@ animation: 1s matchAnim ease-in-out;
     right: 0;
     left: 0;
     bottom: 0;
+    color: #E63946;
     justify-content: center;
     align-items: center;
     z-index: 100; 
-    color: #E63946;
+    font-family: 'Syne Mono', monospace, serif;
+    transition: background-color 500ms, font-size 500ms;
+
 
 }
 
 
-.overlay-text-small{
+.overlay-text-small {
     font-size: .3em;
 
 }
 
-.overlay-text.visible{
+.overlay-text.visible {
     display: flex;
     flex-direction: column;
     animation: overlay-grow 500ms forwards;
@@ -247,18 +242,31 @@ animation: 1s matchAnim ease-in-out;
 
 
 
-@keyframes dance {
-  0%, 100% {
-    transform: rotate(0)
-  }
-  25% {
-    transform: rotate(-30deg)
-  }
-  75% {
-    transform: rotate(30deg)
-  }
+
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0,0,0,0);
+        font-size: 0;
+    }
+    to {
+        background-color: rgba(0,0,0,.8);
+        font-size: 10em;
+    }
+
 }
 
+/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 2)*/
+
+
+@keyframes matchAnim {
+	0% { 
+		background: #E63946;
+	}
+	100% {
+		background: #A8DADC;
+	}
+}
 
 @media (max-width: 600px) {
 
