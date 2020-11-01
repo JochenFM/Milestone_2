@@ -12,7 +12,7 @@ background: radial-gradient(#457B9D, #1D3557);
 
 html {
     min-height: 100vh;
-    cursor: url("assets/cursors/FemaleIcon.cur"), auto;
+    cursor: url("assets/cursors/female_sci.cur"), default;
 }
 
 .page-title{
@@ -68,8 +68,11 @@ transform: scale(1);
 
 .card:hover {
 
-    cursor: url("assets/cursors/female_sci.cur"), auto;
+    cursor: url("assets/cursors/FemaleIcon.cur"), auto;
 }
+
+
+/*idea for active card on click is from Marina Ferreira under https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s (from 11:33min) */
 
 .card:active {
 
@@ -93,13 +96,13 @@ transform: scale(1);
     transition: transform 500ms ease-in-out; 
 }
 
-
-.card:hover .card-back{
+/*.card:hover needs to go here instead of .card.visible for actual game, in both lines*/
+.card.visible .card-back{
 
 transform: rotateY(-180deg);
 
 }
-.card:hover .card-front{
+.card.visible .card-front{
 
 transform: rotateY(0)
 }
@@ -110,8 +113,6 @@ transform: rotateY(0)
     background-color: #A8DADC;
     border: 2px solid #E63946;
     
-
-
 }
 
 
@@ -174,6 +175,26 @@ position: relative;
 border-radius: 12px;
 }
 
+
+/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL */
+
+.card:hover .card-vlaue{
+
+
+animation: 1s matchAnim ease-in-out;
+			animation-delay: .5s;
+
+
+@keyframes matchAnim {
+	0% { 
+		background: #E63946;
+	}
+	100% {
+		background: #A8DADC;
+	}
+}
+
+
 .overlay-text{
     display: none;
     position: fixed;
@@ -224,6 +245,19 @@ border-radius: 12px;
     padding: 10px, 0;
 }
 
+
+
+@keyframes dance {
+  0%, 100% {
+    transform: rotate(0)
+  }
+  25% {
+    transform: rotate(-30deg)
+  }
+  75% {
+    transform: rotate(30deg)
+  }
+}
 
 
 @media (max-width: 600px) {
