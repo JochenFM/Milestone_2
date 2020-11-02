@@ -1,12 +1,24 @@
+class AudioController {
+    constructor() {
+        this.bgMusic = new Audio('assets/sounds/bgMusic.wav');
+        this.flipSound = new Audio('assets/sounds/card-flip.wav');
+        this.matchSound = new Audio('assets/sounds/matching-hand-bells.wav');
+        this.victorySound = new Audio('assets/sounds/victory-fanfare.wav');
+        this.gameOverSound = new Audio('assets/sounds/game-over.wav');
+        this.bgMusic.loop = true;  
+        this.bgMusic.volume = 0.6;  
+    }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ready());
-} else {
-    ready();
+    startMusic() {
+        this.bgMusic.play();
+        
+    }
 }
+
+
 function ready() {
-    Let overlays = Array.from(document.getElementsByClassName('overlay-text'));
-    Let cards = Array.from(document.getElementsByClassName('card'));
+    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    let cards = Array.from(document.getElementsByClassName('card'));
 
 
     overlays.forEach(overlay => {
@@ -14,6 +26,8 @@ function ready() {
 
              overlay.classList.remove('visible');   
             //game.start.Game();
+let audioController = new AudioController();
+audioController.startMusic();
         });
 
     });
@@ -27,21 +41,9 @@ function ready() {
     });
 }
 
-
-
-
-class AudioController {
-    constructor() {
-        this.bgMusic = new Audio('assets/sounds/bgMusic.wav');
-        this.flipSound = new Audio('assets/sounds/card-flip.wav');
-        this.matchSound = new Audio('assets/sounds/.wav');
-        this.victorySound = new Audio('assets/sounds/victory-fanfare.wav');
-        this.gameOverSound = new Audio('assets/sounds/');
-        this.bgMusic.loop = true;   
-    }
-
-    startMusic() {
-        this.bgMusic.play();
-        
-    }
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready());
+} else {
+    ready();
 }
+
