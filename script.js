@@ -11,7 +11,26 @@ class AudioController {
 
     startMusic() {
         this.bgMusic.play();
-        
+
+    }    
+    
+    stopMusic() {
+        this.bgMusic.pause();
+        this.bgMusic.currentTime = 0;
+    }
+    flip() {
+        this.flipSound.play();
+    }
+    match() {
+        this.matchSound.play();
+    }
+    victory() {
+        this.stopMusic();
+        this.victorySound.play();
+    }
+    gameOver() {
+        this.stopMusic();
+        this.gameOverSound.play();
     }
 }
 
@@ -26,8 +45,8 @@ function ready() {
 
              overlay.classList.remove('visible');   
             //game.start.Game();
-let audioController = new AudioController();
-audioController.startMusic();
+//let audioController = new AudioController();
+//audioController.startMusic();
         });
 
     });
