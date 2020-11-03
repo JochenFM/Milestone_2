@@ -96,7 +96,7 @@ transform: scale(1);
     transition: transform 500ms ease-in-out; 
 }
 
-/*.card:hover needs to go here for .card.visible for actual game, in both lines*/
+/*.card:hover needs to go out here for .card.visible for actual game, in both lines*/
 .card.visible .card-back{
 
 transform: rotateY(-180deg);
@@ -173,12 +173,14 @@ height: 100%;
 width: 100%;
 position: relative;
 border-radius: 12px;
+transition: .4s ease-in-out;
+/*transition above is part of the animation mentioned below taken from codepen*/
 }
 
 
 /*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 1) .card:hover needs to be changed back into .card.matched for JS*/
 
-.card:hover .card-vlaue{
+.card:hover.card-vlaue{
 
 
 animation: 1s matchAnim ease-in-out;
