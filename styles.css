@@ -96,7 +96,7 @@ transform: scale(1);
     transition: transform 500ms ease-in-out; 
 }
 
-/*.card:hover needs to go here instead of .card.visible for actual game, in both lines*/
+/*.card:hover needs to go here for .card.visible for actual game, in both lines*/
 .card.visible .card-back{
 
 transform: rotateY(-180deg);
