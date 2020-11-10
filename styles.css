@@ -257,6 +257,70 @@ img.frame {
 }
 
 
+
+/*Alertbox*/
+
+.alertbox {
+    position:fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #E63946;
+    border-radius: 10px;
+    z-index: 10px;
+    background-color:#F1FAEE;
+    width: 500px;
+    max-width: 80%;
+}
+
+.alertbox-header{
+
+padding: 10px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1.5px solid black;
+
+}
+
+.alertbox-header.title {
+
+font-size: 1.25rem;
+font-weight: bold;
+}
+
+.alertbox-header .close-button {
+
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.alertbox-header.close-button:hover {
+
+    cursor: url("assets/cursors/FemaleIcon.cur"), auto;
+}
+
+.alertbox-body {
+
+    padding: 10px 15px;
+}
+
+
+/*#overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+
+}*/
+
+
 footer {
 
     margin: 0;
