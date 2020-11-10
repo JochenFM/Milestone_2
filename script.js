@@ -36,21 +36,36 @@ class AudioController {
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
+}
 
-    startGame() {
-        this.cardToCheck = null;
-        this.totalClicks = 0;
-        this.timeRemaining = this.totalTime;
-        this.matchedCards = [];
-        this.busy = true;
+
+class MixOrMatch{
+    constructor(totalTime, cards){
+    this.cardsArray = cards;
+    this.totalTime = totalTime;
+    this.timer = document.getElementById('time-remaining');
+    this.ticker = document.getElementById('flips');
+    this.audioController = new AudioController();
     }
 
+
+    //is called whenever Game starts and hence I need to set here all properties that I need for when game starts
+startGame() {
+    this.cardToCheck = null;
+    this.totalClicks =0;
+    this.timeRemaining = this.totalTime; //time back to 0//
+    this.matchedCards = []; //empty array for all matched cards to go in//
+
+
+}
+
+   
     flipCard(card){
         if(this.canFlipCard(card)) {
             this.audioController.flip();
             this.totalClicks++;
-            this.ticker.innerText = this.totalClicks;
-            card.classList.add('visible');
+            this.ticker.innerText = this.totalClicks;//updates flips in ticker to current value//
+            card.classList.add('visible'); 
         }
 
 
@@ -65,14 +80,6 @@ class AudioController {
 
 
 
-
-class MixOrMatch{
-    constructor(totalTime, cards){
-    this.cardsArray = cards;
-    this.totalTime = totalTime;
-    }
-}
-
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -83,7 +90,8 @@ function ready() {
         overlay.addEventListener('click', () => {
 
              overlay.classList.remove('visible');   
-            game.startGame();
+            //game.startGame();
+//uncomment that for demonstration of music at start:
 //let audioController = new AudioController();
 //audioController.startMusic();
         });
@@ -93,7 +101,7 @@ function ready() {
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            game.flipCard('card');
+            game.flipCard(card);
         });
     });
 }

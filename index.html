@@ -15,7 +15,7 @@
     <h1 class="page-title">Against the Odds: Women Trailblazers in Statistics</h1>
     <h2 class ="lead"> Match the cards and beat the clock!</h2>
     <!--Game Overlays-->
-    <div class ="overlay-text">
+    <div class ="overlay-text visible">
         Click to Start
     </div>
     <div id= "game-over-text" class ="overlay-text">
@@ -27,16 +27,16 @@
     <span class ="overlay-text-small">Click to view your prize!</span>    
     </div>
     <!--Prize Overlay-->   
-    <div class ="overlay-text visible" id="prize-overlay">
-        <p class="prize-text"> Gertrude Mary Cox in Egypt</p>
+    <div class ="overlay-text" id="prize-overlay">
+        <p class="prize-text"> Gertrude Cox in Egypt</p>
     <div class = "prize-content">
         <img src="assets/images/cox-egypt.gif" class="frame">
     </div>
     <div class = "prize-bio">
         <a target = "_blank" href= "https://doi.org/10.1017/S026988970800207X">
-        <span class ="overlay-text-small">Click <span>here </span> for more info on Gertrude Cox in Egypt or...</span></a>    
+        <span class ="overlay-text-small">Click <span>here</span> for more info on Gertrude Cox in Egypt or...</span></a>    
     </div>
-    <span class ="overlay-text-small">...restart</span>    
+    <span class ="overlay-text-small">...Restart</span>    
     </div>
 <!--Alerts on match  add a class of "active" to alertbox below and alertbox will appear-->
 <div class = "alertbox active" id="alertbox">
@@ -63,7 +63,7 @@
                 Flips <span id="flips">0</span>
             </div>
         </div>
-        <div class="card visible">
+        <div class="card">
         <!--visible class above needs to go - this is just to check colour changing if matched-->
             <div class="card-back card-face">
                 <img class="female-icon female-icon-top-left" src="assets/images/femaleicon.png" alt="">
