@@ -180,7 +180,7 @@ transition: .4s ease-in-out;
 
 /*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 1) .card:hover needs to be changed back into .card.matched for JS*/
 
-.card:hover.card-vlaue{
+.card.matched.card-vlaue{
 
 
 animation: 1s matchAnim ease-in-out;

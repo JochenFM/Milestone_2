@@ -55,7 +55,7 @@ startGame() {
     this.matchedCards = []; //empty array for all matched cards to go in//
     
     
-    //wait 500ms before doing what it in this function
+    //wait 500ms before doing what is in this function
     setTimeout(() =>{
         this.audioController.startMusic();
         this.shuffleCards(this.cardsArray);
@@ -71,9 +71,9 @@ startGame() {
 }
 hideCards() {
 
-
     this.cardsArray.forEach(card =>{
         card.classList.remove('visible');
+        card.classList.remove('matched'); //unclear whether I need this as I do not have a matched class in HTML
     });
 }
    
@@ -82,12 +82,48 @@ hideCards() {
             this.audioController.flip();
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;//updates flips in ticker to current value//
-            card.classList.add('visible'); 
-        }
+            card.classList.add('visible');
+            
+            //are we flipping a card for the first time or trying and match a card?
 
+            if(this.cardToCheck)
+                this.checkForCardMatch(card);//if card to check is not no then whichever card I just flipped = card to check
+            else {
+               this.cardToCheck = card; 
+
+            }
+        }
+    
+    checkForCardMatch(card) {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck));  //if the card that I just clicked = to card to check, i.e. the src attributes, 
+                this.cardMatch(card, this.cardToCheck);                                                            //then we know we have a match
+            else 
+                this.cardMisMatch(card, this.cardToCheck);
+
+                this.cardToCheck = null;
+    }
+     
+
+    cardMatch(card1, card2) {
+        this.matchedCards.push(card1);//push card into empty array
+        this.matchedCards.push(card2);
+        card1.classList.add('matched');
+        card2.classList.add('matched');//this should add the animation in CSS I got from codepen.com
+        this.audioController.match();
+        if(this.matchedCards.length === this.cardsArray) //if these two have the same length we know it is victory
+            this.victory(); 
+    }
+
+
+    cardMisMatch(card){
 
     }
 
+    getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src; //gets the card in HTML by the class indicated, as it is only one, it is 0 (=zero-index), 
+                                                                //and then the source attribute
+        
+    }  
 //interval calls the function every 1000ms, which is 1s, so here we have got countdown by taking timeremaining "--" every second, and at the same time
 //time remaining value is updated on the html page via innertext. and if timeremaining =0 then gameover function called.
 
@@ -142,8 +178,6 @@ victory() {
 
     }
 }
-
-
 
 
 function ready() {
