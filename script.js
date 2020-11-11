@@ -6,7 +6,7 @@ class AudioController {
         this.victorySound = new Audio('assets/sounds/victory-fanfare.wav');
         this.gameOverSound = new Audio('assets/sounds/game-over.wav');
         this.bgMusic.loop = true;  
-        this.bgMusic.volume = 0.6;  
+        this.bgMusic.volume = 0.5;  
     }
 
     startMusic() {
@@ -88,29 +88,35 @@ hideCards() {
 
     }
 
-
-StartCountDown() {
-
-//interval calls the function every 1000ms, which is 1s, so here we have got countdown by taking timeremaining in "--" every second, and at the same time
+//interval calls the function every 1000ms, which is 1s, so here we have got countdown by taking timeremaining "--" every second, and at the same time
 //time remaining value is updated on the html page via innertext. and if timeremaining =0 then gameover function called.
 
+StartCountDown() {
     return setInterval(() => {
-        this.TimeRemaining --;
+        this.timeRemaining --;
         this.timer.innerText = this.timeRemaining;
-if(this.timeRemaining===0)
-    this.gameOver();
+        if(this.timeRemaining === 0)
+            this.gameOver();
     }, 1000);
 }
 
 //and in gameover function, interval is cleared and countdown stopped, and timer in startgame function is reset everytime we start a new game, game over 
 //audio starts, and the gameover overlay pops up as 'visible' property is added.
 gameOver(){
-
     clearInterval(this.countDown);
     this.audioController.gameover();
-    document.getElementById('game-over-text'),classList.add('visible');
+    document.getElementById('game-over-text').classList.add('visible');
 }
 
+
+victory() {
+
+    clearInterval(this.countDown);
+    this.audioController.victory();
+    document.getElementById('victory-text').classList.add('visible');
+
+
+}
 
     //Fisher-Yates algorithm taken from https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2049s (from 27.20 min). This loops backwards through array with n cases from the 
     // last element (n-1) down to the first (1), and for each  iteration a random integer is created which is greater than/equal to 0 and less than or equal to i which is what 
@@ -130,9 +136,9 @@ gameOver(){
     }
 
 
-    canFlipCard(_card) {
+    canFlipCard(card) {
         return true;
-        //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
 
     }
 }
