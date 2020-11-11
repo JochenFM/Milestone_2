@@ -290,7 +290,7 @@ border-bottom: 1.5px solid black;
 
 }
 
-/*for some reason sytling of header does not show as it is, but if I change to .title only, it does*/
+/*for some reason sytling of header does not show as it should, but if I change to .title only, it does*/
 .alertbox-header.title {
 
 font-size: 1.25rem;
