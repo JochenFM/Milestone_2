@@ -31,10 +31,7 @@ class AudioController {
     gameOver() {
         this.stopMusic();
         this.gameOverSound.play();
-        this.TimeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining');
-        this.ticker = document.getElementById('flips');
-        this.audioController = new AudioController();
+       
     }
 }
 
@@ -43,6 +40,7 @@ class MixOrMatch{
     constructor(totalTime, cards){
     this.cardsArray = cards;
     this.totalTime = totalTime;
+    this.timeRemaining = totalTime;
     this.timer = document.getElementById('time-remaining');
     this.ticker = document.getElementById('flips');
     this.audioController = new AudioController();
@@ -51,8 +49,8 @@ class MixOrMatch{
 
     //is called whenever Game starts and hence I need to set here all properties that I need for when game starts
 startGame() {
-    this.cardToCheck = null;
-    this.totalClicks =0;
+    this.cardToCheck = 0;
+    this.totalClicks = 0;
     this.timeRemaining = this.totalTime; //time back to 0//
     this.matchedCards = []; //empty array for all matched cards to go in//
     
@@ -60,11 +58,11 @@ startGame() {
     //wait 500ms before doing what it in this function
     setTimeout(() =>{
         this.audioController.startMusic();
-        this.shuffleCards();
+        this.shuffleCards(this.cardsArray);
         this.countDown = this.StartCountDown();
         this.busy = false;
 
-    }, 500);
+    }, 500)
     //reset timer and flip counter by innerText once new game is started
     this.hideCards();
     this.timer.innerText = this.timeRemaining;
@@ -145,14 +143,13 @@ gameOver(){
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(5, cards);
+    let game = new MixOrMatch(100, cards);
 
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-
              overlay.classList.remove('visible');   
-            //game.startGame();
+            game.startGame();
 //uncomment that for demonstration of music at start:
 //let audioController = new AudioController();
 //audioController.startMusic();
