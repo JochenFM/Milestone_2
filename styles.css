@@ -317,7 +317,7 @@ font-weight: bold;
 }
 
 
-#overlay {
+/*#overlay {
 
     position: fixed;
     opacity: 0;
@@ -327,11 +327,11 @@ font-weight: bold;
     right: 0;
     bottom: 0;
     /*z-index: 100;*/
-    background-color: rgba(0,0,0,.8);
+    /*background-color: rgba(0,0,0,.8);
     pointer-events: none;
     /*so that the overlay won't capture click events, so to be able to click on anything outside the modal when the overlay is not active*/
 
-}
+/*}
 
 
 #overlay.active {
@@ -339,7 +339,7 @@ font-weight: bold;
 opacity: 1;
 pointer-events: all;
 
-}
+}*/
 
 
 
