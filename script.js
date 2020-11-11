@@ -59,7 +59,7 @@ startGame() {
     setTimeout(() =>{
         this.audioController.startMusic();
         this.shuffleCards(this.cardsArray);
-        this.countDown = this.StartCountDown();
+        this.countDown = this.startCountDown();
         this.busy = false;
 
     }, 500)
@@ -88,21 +88,22 @@ hideCards() {
 
             if(this.cardToCheck)
                 this.checkForCardMatch(card);//if card to check is not no then whichever card I just flipped = card to check
-            else {
+           else 
                this.cardToCheck = card; 
 
             }
         }
-    
-    checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck));  //if the card that I just clicked = to card to check, i.e. the src attributes, 
-                this.cardMatch(card, this.cardToCheck);                                                            //then we know we have a match
-            else 
-                this.cardMisMatch(card, this.cardToCheck);
 
-                this.cardToCheck = null;
+    checkForCardMatch(card) {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))  //if the card that I just clicked = to card to check, i.e. the src attributes, 
+            this.cardMatch(card, this.cardToCheck);                                                            //then I know we have a match
+      else 
+            this.cardMisMatch(card, this.cardToCheck);
+
+        this.cardToCheck = null; //whether match or mismatch, at that point there is no card to check
+    
     }
-     
+
 
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);//push card into empty array
@@ -110,13 +111,19 @@ hideCards() {
         card1.classList.add('matched');
         card2.classList.add('matched');//this should add the animation in CSS I got from codepen.com
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray) //if these two have the same length we know it is victory
+        if(this.matchedCards.length === this.cardsArray.length) //if these two have the same length I know it is victory
             this.victory(); 
     }
 
-
-    cardMisMatch(card){
-
+//in case of mismatch visible attribute is removed, i.e. cards turn back on their face, but with 1s delay. THis busy=true means that for this second no clicks anywhere else are possible
+//then after 1 s: this.busy=false
+    cardMisMatch(card1, card2) {
+        this.busy=true;
+        setTimeout(() => {
+            card1.classList.remove('visible');
+            card2.classList.remove('visible');
+            this.busy=false;
+        }, 1000);
     }
 
     getCardType(card) {
@@ -127,7 +134,7 @@ hideCards() {
 //interval calls the function every 1000ms, which is 1s, so here we have got countdown by taking timeremaining "--" every second, and at the same time
 //time remaining value is updated on the html page via innertext. and if timeremaining =0 then gameover function called.
 
-StartCountDown() {
+startCountDown() {
     return setInterval(() => {
         this.timeRemaining --;
         this.timer.innerText = this.timeRemaining;
@@ -173,7 +180,6 @@ victory() {
 
 
     canFlipCard(card) {
-        return true;
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
 
     }
@@ -190,9 +196,7 @@ function ready() {
         overlay.addEventListener('click', () => {
              overlay.classList.remove('visible');   
             game.startGame();
-//uncomment that for demonstration of music at start:
-//let audioController = new AudioController();
-//audioController.startMusic();
+
         });
 
     });
