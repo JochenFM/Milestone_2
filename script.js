@@ -161,6 +161,8 @@ victory() {
 
 }
 
+
+
     //Fisher-Yates algorithm taken from https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=2049s (from 27.20 min). This loops backwards through array with n cases from the 
     // last element (n-1) down to the first (1), and for each  iteration a random integer is created which is greater than/equal to 0 and less than or equal to i which is what 
     //I am using to iterate through the array. And then the random item in the array is exchanged with the one I am currently on - they are switched.
@@ -185,6 +187,11 @@ victory() {
     }
 }
 
+
+function pageRedirect() {
+      window.location.href = "prize.html";
+
+}
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));

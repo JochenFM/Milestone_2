@@ -233,6 +233,18 @@ font-size: 5.5rem;
 }
 
 
+.btn {
+
+font-family: 'Syne Mono', monospace, serif;
+font-size: 2rem;
+color:#E63946;
+margin-top: 1rem;
+background-color: transparent;
+border: 1px solid #E63946;
+
+}
+
+
 /*Prize info gallery*/
 
 .main {
@@ -280,17 +292,16 @@ font-size: 5.5rem;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-}
+
+
+
+
 
 /*.prize-content {
 
 }
 
-#restart-button {
 
-
-
-}
 */
 /* Responsive picture frame taken from https://codepen.io/dudleystorey/pen/yyZpeX */
 img.frame {

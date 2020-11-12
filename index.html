@@ -15,16 +15,17 @@
     <h1 class="page-title">Against the Odds: Women Trailblazers in Statistics</h1>
     <h2 class ="lead"> Match the cards and beat the clock!</h2>
     <!--Game Overlays-->
-    <div class ="overlay-text visible">
+    <div class ="overlay-text">
         Click to Start
     </div>
     <div id= "game-over-text" class ="overlay-text">
         GAME OVER
         <span class ="overlay-text-small">Click to Restart</span>
     </div>
-    <div id= "victory-text" class ="overlay-text">
+    <div id= "victory-text" class ="overlay-text visible">
         VICTORY
-    <span class ="overlay-text-small">Click to view your prize!</span>    
+    <!--button page redirect was inspired by https://www.tutorialrepublic.com/faq/how-to-redirect-to-another-web-page-using-jquery.php-->    
+    <button type ="button" class ="btn" onclick="pageRedirect()" id="prize-button">Click to view your prize!</button>  
     </div>
     <!--Prize Overlay-->   
     <div class ="overlay-text" id="prize-overlay">
