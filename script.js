@@ -147,7 +147,7 @@ startCountDown() {
 //audio starts, and the gameover overlay pops up as 'visible' property is added.
 gameOver(){
     clearInterval(this.countDown);
-    this.audioController.gameover();
+    this.audioController.gameOver();
     document.getElementById('game-over-text').classList.add('visible');
 }
 
