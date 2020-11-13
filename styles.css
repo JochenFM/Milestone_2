@@ -245,6 +245,10 @@ border: 1px solid #E63946;
 }
 
 
+
+
+
+
 /*Prize info gallery*/
 
 .main {
@@ -255,29 +259,36 @@ border: 1px solid #E63946;
 
 .row {
 
-    margin: 8px - 16px;
+    margin: 16px;
 
 }
 
+
+.row,
 .row > .column {
-  padding: 8px;
+  padding: 6px;
 }
 
 .column {
-  float: left;
-  width: 25%;
+  
+float: left;
+width: 25%;
+   
 
 }
+
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
+
 .content {
   background-color:#F1FAEE;
   padding: 10px;
 }
+
 
 .prize-image {
 
@@ -293,16 +304,20 @@ border: 1px solid #E63946;
 }
 
 
+.restart-btn {
 
-
-
-
-/*.prize-content {
+font-family: 'Syne Mono', monospace, serif;
+display: block;
+text-align: center;
+font-size: 2rem;
+color:#E63946;
+margin-top: 1rem;
+background-color: transparent;
+border: none;
 
 }
 
 
-*/
 /* Responsive picture frame taken from https://codepen.io/dudleystorey/pen/yyZpeX */
 img.frame {
   border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch; 
@@ -478,8 +493,5 @@ footer {
     width: 100%; }
     }
 
-    .column {
-
-        width: 100%;
-    }
+    
 }

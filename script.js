@@ -204,6 +204,9 @@ function ready() {
              overlay.classList.remove('visible');   
             game.startGame();
 
+    //here function for restart on button click on prize.html:        
+
+
         });
 
     });
