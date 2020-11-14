@@ -331,8 +331,22 @@ width: 25%;
 .content {
   background-color:#F1FAEE;
   padding: 10px;
+
 }
 
+/*that needs redoing
+
+.page-title h2 {
+
+color: #F1FAEE;
+font-weight: 600;
+text-align: center;
+font-size: 4em;
+}
+*/ 
+
+
+/*---*/
 
 .prize-image {
 
