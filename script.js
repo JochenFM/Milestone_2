@@ -193,6 +193,12 @@ function pageRedirect() {
 
 }
 
+function clickedButton()
+            {
+        window.location.href="index.html"
+
+            }
+
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
@@ -206,6 +212,7 @@ function ready() {
 
     //here function for restart on button click on prize.html:        
 
+    
 
         });
 

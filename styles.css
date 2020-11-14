@@ -96,6 +96,48 @@ transform: scale(1);
     transition: transform 500ms ease-in-out; 
 }
 
+
+.card-face div {
+
+    display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  color: #F1FAEE;
+  text-transform: uppercase;
+
+}
+
+.card-front img{
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+.card-face:hover div{
+ background: rgba(255,255,255,0.3);
+}
+
+.card-face:hover div{
+  opacity: 1;
+  top: 0;
+}
+
+
+.card-front:hover img{
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+}
+
+/*somewhere in here I need to target the matched class which JS adds to cards via:
+card1.classList.add('matched');
+        card2.classList.add('matched');*/
+
+
+
+
 /*.card:hover needs to go out here for .card.visible for actual game, in both lines*/
 .card.visible .card-back{
 
@@ -106,6 +148,7 @@ transform: rotateY(-180deg);
 
 transform: rotateY(0)
 }
+
 
 
 .card-back {
@@ -173,12 +216,12 @@ height: 100%;
 width: 100%;
 position: relative;
 border-radius: 12px;
-transition: .4s ease-in-out;
-/*transition above is part of the animation mentioned below taken from codepen*/
+/*transition: .4s ease-in-out;
+transition above is part of the animation mentioned below taken from codepen*/
 }
 
 
-/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 1) .card:hover needs to be changed back into .card.matched for JS*/
+/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 1) .card:hover needs to be changed back into .card.matched for JS
 
 .card.matched .card-value{
 
@@ -187,7 +230,7 @@ animation: 1s matchAnim ease-in-out;
 animation-delay: .5s;
 
 }
-
+*/
 
 .overlay-text{
     display: none;
@@ -309,7 +352,7 @@ width: 25%;
 font-family: 'Syne Mono', monospace, serif;
 display: block;
 text-align: center;
-font-size: 2rem;
+font-size: 4rem;
 color:#E63946;
 margin-top: 1rem;
 background-color: transparent;
