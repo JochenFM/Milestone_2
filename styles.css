@@ -97,10 +97,11 @@ transform: scale(1);
 }
 
 
+
 .card-face div {
 
-    display: table-cell;
-  vertical-align: middle;
+display: table-cell;
+  vertical-align: bottom;
   position: relative;
   top: 20px;
   opacity: 0;
@@ -116,11 +117,13 @@ transform: scale(1);
           transform: scale3d(1, 1, 1);
 }
 
-.card-face:hover div{
- background: rgba(255,255,255,0.3);
+/*  JS as it is now adds matched attribute to card div not to card face, so I would need to add another line of code to cardMatch() that adds matched to card-face
+
+.card-front:hover div{
+ background: rgba(20, 19, 19, 0.5);
 }
 
-.card-face:hover div{
+.card-front:hover div{
   opacity: 1;
   top: 0;
 }
@@ -131,10 +134,8 @@ transform: scale(1);
           transform: scale3d(1.2, 1.2, 1);
 }
 
-/*somewhere in here I need to target the matched class which JS adds to cards via:
-card1.classList.add('matched');
-        card2.classList.add('matched');*/
 
+*/
 
 
 
@@ -214,7 +215,7 @@ transition: width 100ms ease-in-out, height 100ms ease-in-out;
 
 height: 100%;
 width: 100%;
-position: relative;
+position: absolute;
 border-radius: 12px;
 /*transition: .4s ease-in-out;
 transition above is part of the animation mentioned below taken from codepen*/
