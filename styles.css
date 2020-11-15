@@ -316,7 +316,8 @@ border: 1px solid #E63946;
 .column {
   
 float: left;
-width: 25%;
+max-width: 250px;
+max-height: 250px;
    
 
 }
