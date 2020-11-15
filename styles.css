@@ -28,7 +28,7 @@ font-size: 4em;
 
     color:#F1FAEE;
     font-weight: 400;
-    font-size: 3em;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -366,13 +366,13 @@ font-size: 4em;
 .restart-btn {
 
 font-family: 'Syne Mono', monospace, serif;
-display: block;
+display: ;
 text-align: center;
-font-size: 4rem;
+font-size: 3rem;
 color:#E63946;
 margin-top: 1rem;
 background-color: transparent;
-border: none;
+border: 1px solid #E63946;
 
 }
 
