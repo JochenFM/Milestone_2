@@ -24,6 +24,26 @@ font-size: 4em;
 }
 
 
+
+#soundToggler {
+
+    height: 3rem;
+    width: 3rem;
+    padding: 10px;
+    background-size: cover;
+    border: solid 2px #E63946;
+    border-radius: .5rem;
+    background-color:#F1FAEE;
+
+ 
+}
+
+.soundOn {
+
+    background-image: url()
+}
+
+
 .lead {
 
     color:#F1FAEE;
@@ -335,19 +355,7 @@ max-height: 250px;
 
 }
 
-/*that needs redoing
 
-.page-title h2 {
-
-color: #F1FAEE;
-font-weight: 600;
-text-align: center;
-font-size: 4em;
-}
-*/ 
-
-
-/*---*/
 
 .prize-image {
 
