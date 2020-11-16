@@ -29,8 +29,8 @@ font-size: 4em;
 
     height: 3rem;
     width: 3rem;
-    padding: 10px;
     background-size: cover;
+    background-position: center;
     border: solid 2px #E63946;
     border-radius: .5rem;
     background-color:#F1FAEE;
@@ -40,9 +40,26 @@ font-size: 4em;
 
 .soundOn {
 
-    background-image: url()
+        background-image: url('assets/images/unmute_icon.png')
 }
 
+.soundOff {
+
+    background-image: url('assets/images/mute_icon.png')
+}
+
+
+#playToggler {
+
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    background-position: center;
+    border: solid 2px #E63946;
+    border-radius: .5rem;
+    background-color:#F1FAEE;
+
+}
 
 .lead {
 
