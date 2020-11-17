@@ -37,19 +37,12 @@ font-size: 4em;
 
 
 
-.gamebuttons {
-
-align-items: center;
-justify-content: center;
-outline: none;
-}
-
 #soundToggler {
 
+    background: url('assets/images/unmute_icon.png') no-repeat;
     height: 3rem;
     width: 3rem;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     border: solid 2px #E63946;
     border-radius: .5rem;
@@ -59,20 +52,9 @@ outline: none;
 
 
 
-.soundOn {
-
-background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg');
-
-}
-
-.soundOff {
-
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Mute_Icon.svg');
-}
-
 #playToggler {
 
-    background-repeat: no-repeat;
+    background: url('assets/images/pause_icon.png') no-repeat;
     height: 3rem;
     width: 3rem;
     background-size: cover;

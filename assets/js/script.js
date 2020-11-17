@@ -9,6 +9,8 @@ class AudioController {
         this.bgMusic.volume = 0.5;  
     }
 
+
+
     startMusic() {
         this.bgMusic.play();
 
@@ -35,27 +37,40 @@ class AudioController {
     }
 }
 
-//background music sound toggler goes here:
 
-document.getElementById('soundToggler').click(() => {
-        let soundOn = sound;
-        soundOn ? stopBgMusic() : startBgMusic();
-    });
-
-    function stopBgMusic() {
-        sound = false;
-        btn.classList.add('soundOff');
-        btn.classList.remove('soundOn');
-        audio.stopMusic();
+//background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
+var playbtn, mutebtn;
+//set object reference
+playbtn = document.getElementById("playToggler");
+mutebtn = document.getElementById("soundToggler");
+//add event handling
+playbtn.addEventListener("click", playPause);
+mutebtn.addEventListener("click", mute);
+//functions
+function playPause() {
+if(bgMusic.paused) {
+   bgMusic.play();
+   playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat"; 
+}
+else {
+    bgMusic.pause();
+    playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
     }
+}
 
-    function startBgMusic() {
-        sound = true;
-        btn.classList.add('soundOn');
-        btn.classList.remove('soundOff');
-        audio.startMusic();
+function mute() {
+if(bgMusic.muted) {
+    bgMusic.muted = false;
+    mutebtn.style.background = "url(assets/images/unmute_icon.png) no-repeat";
+}else {
+
+bgMusic.muted = true;
+mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
+        }
+    
     }
-
+    
+ 
 class MixOrMatch{
     constructor(totalTime, cards){
     this.cardsArray = cards;
@@ -211,13 +226,12 @@ victory() {
 function pageRedirect() {
       window.location.href = "prize.html";
 
-}
+    }
 
-function clickedButton()
-            {
-        window.location.href="index.html"
+function clickedButton(){
+        window.location.href="index.html";
 
-            }
+    }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
@@ -229,9 +243,6 @@ function ready() {
         overlay.addEventListener('click', () => {
              overlay.classList.remove('visible');   
             game.startGame();
-
-    //here function for restart on button click on prize.html:        
-
     
 
         });
