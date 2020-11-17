@@ -35,8 +35,26 @@ class AudioController {
     }
 }
 
-//background music sound toggler
+//background music sound toggler goes here:
 
+document.getElementById('soundToggler').click(() => {
+        let soundOn = sound;
+        soundOn ? stopBgMusic() : startBgMusic();
+    });
+
+    function stopBgMusic() {
+        sound = false;
+        btn.classList.add('soundOff');
+        btn.classList.remove('soundOn');
+        audio.stopMusic();
+    }
+
+    function startBgMusic() {
+        sound = true;
+        btn.classList.add('soundOn');
+        btn.classList.remove('soundOff');
+        audio.startMusic();
+    }
 
 class MixOrMatch{
     constructor(totalTime, cards){
