@@ -38,13 +38,13 @@ class AudioController {
 
     pauseMusic() {
 
-        this.bgMusic.pause();
+        bgMusic.pause();
 
     }
 
     muteMusic() {
 
-        this.bgMusic.muted();
+        bgMusic.muted();
     }
 }
 
@@ -68,21 +68,21 @@ let bgMusic = new AudioController();
 function playPause() {
     if (bgMusic.bgMusic().paused) {
         bgMusic.bgMusic().play();
-        playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat"; 
+        playbtn.style.background = "url(/assets/images/pause_icon.png) no-repeat"; 
     }
     else {
         bgMusic.bgMusic().pause();
-        playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
+        playbtn.style.background = "url(/assets/images/play_icon.png) no-repeat"; 
     }
 }
 
 function mute() {
     if (bgMusic.bgMusic().muted) {
         bgMusic.bgMusic().muted = false;
-        mutebtn.style.background = "url(assets/images/unmute_icon.png) no-repeat";
+        mutebtn.style.background = "url(/assets/images/unmute_icon.png) no-repeat";
     } else {
         bgMusic.bgMusic().muted = true;
-        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
+        mutebtn.style.background = "url(/assets/images/mute_icon.png) no-repeat";  
     }
 }
     
