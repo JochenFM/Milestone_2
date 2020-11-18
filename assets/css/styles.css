@@ -59,10 +59,6 @@ font-size: 2em;
 
 
 
-
-/* idea to center buttons horizontally and vertically is from https://www.w3schools.com/howto/howto_css_center_button.asp */
-
-
 .gamebuttons {
 
     height: 3rem;
@@ -74,10 +70,12 @@ font-size: 2em;
     background-color:#F1FAEE;
     outline: none;
     margin: 0;
-position: absolute;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
+    /* idea to center buttons horizontally and vertically is from https://www.w3schools.com/howto/howto_css_center_button.asp */
+
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 
@@ -85,7 +83,7 @@ transform: translateY(-50%);
 
 #soundToggler {
 
-    background: url('assets/images/unmute_icon.png') no-repeat;
+    background:url(assets/images/unmute_icon.png) no-repeat;
     
 }
 
@@ -93,7 +91,7 @@ transform: translateY(-50%);
 
 #playToggler {
 
-    background: url('assets/images/pause_icon.png') no-repeat;
+    background:url(assets/images/pause_icon.png) no-repeat;
    
 }
 
@@ -148,6 +146,7 @@ display: table-cell;
   top: 20px;
   opacity: 0;
   color: #F1FAEE;
+  font-weight: bold;
   text-transform: uppercase;
 
 }
@@ -159,7 +158,7 @@ display: table-cell;
           transform: scale3d(1, 1, 1);
 }
 
-/*  JS as it is now adds matched attribute to card div not to card face, so I would need to add another line of code to cardMatch() that adds matched to card-face
+/*  JS as it is now adds matched attribute to card div not to card face, so I would need to add another line of code to cardMatch() that adds matched to card-face*/
 
 .card-front:hover div{
  background: rgba(20, 19, 19, 0.5);
@@ -177,7 +176,6 @@ display: table-cell;
 }
 
 
-*/
 
 
 

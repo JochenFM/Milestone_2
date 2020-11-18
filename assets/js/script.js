@@ -66,7 +66,7 @@ let bgMusic = new AudioController();
 
 //functions
 function playPause() {
-    if (this.bgMusic.bgMusic().paused) {
+    if (bgMusic.bgMusic().paused) {
         bgMusic.bgMusic().play();
         playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat"; 
     }
@@ -77,7 +77,7 @@ function playPause() {
 }
 
 function mute() {
-    if (this.bgMusic.bgMusic().muted) {
+    if (bgMusic.bgMusic().muted) {
         bgMusic.bgMusic().muted = false;
         mutebtn.style.background = "url(assets/images/unmute_icon.png) no-repeat";
     } else {
