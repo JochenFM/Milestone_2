@@ -85,13 +85,13 @@ font-size: 2em;
 
     height: 3rem;
     width: 3rem;
-    border: solid 2px #E63946;
+    border: solid 2px #F1FAEE;
     border-radius: .5rem;
     outline: none;
-    background:url(/assets/images/unmute_icon.png) no-repeat;
+    background:url(https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg) no-repeat;
     background-size: cover;
     background-position: center;
-    background-color:#F1FAEE;
+    background-color: #E63946;
 
 }
 
@@ -101,13 +101,13 @@ font-size: 2em;
 
     height: 3rem;
     width: 3rem;
-    border: solid 2px #E63946;
+    border: solid 2px #F1FAEE;
     border-radius: .5rem;
     outline: none;
     background:url(/assets/images/pause_icon.png) no-repeat;
     background-size: cover;
     background-position: center;
-    background-color:#F1FAEE;
+    background-color: #E63946;
 
 }
 
