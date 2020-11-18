@@ -9,66 +9,82 @@ class AudioController {
         this.bgMusic.volume = 0.5;  
     }
 
-
-
     startMusic() {
         this.bgMusic.play();
-
-    }    
+    }
     
     stopMusic() {
         this.bgMusic.pause();
         this.bgMusic.currentTime = 0;
     }
+
     flip() {
         this.flipSound.play();
     }
+
     match() {
         this.matchSound.play();
     }
+
     victory() {
         this.stopMusic();
         this.victorySound.play();
     }
+
     gameOver() {
         this.stopMusic();
-        this.gameOverSound.play();
-       
+        this.gameOverSound.play();   
+    }
+
+    pauseMusic() {
+
+        this.bgMusic.pause();
+
+    }
+
+    muteMusic() {
+
+        this.bgMusic.muted();
     }
 }
 
 
 //background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
 var playbtn, mutebtn;
+
+
+
 //set object reference
 playbtn = document.getElementById("playToggler");
 mutebtn = document.getElementById("soundToggler");
+
 //add event handling
 playbtn.addEventListener("click", playPause);
 mutebtn.addEventListener("click", mute);
+
+let bgMusic = new AudioController();
+
 //functions
 function playPause() {
-if(bgMusic.paused) {
-   bgMusic.play();
-   playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat"; 
-}
-else {
-    bgMusic.pause();
-    playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
+    if (this.bgMusic.bgMusic().paused) {
+        bgMusic.bgMusic().play();
+        playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat"; 
+    }
+    else {
+        bgMusic.bgMusic().pause();
+        playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
     }
 }
 
 function mute() {
-if(bgMusic.muted) {
-    bgMusic.muted = false;
-    mutebtn.style.background = "url(assets/images/unmute_icon.png) no-repeat";
-}else {
-
-bgMusic.muted = true;
-mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
-        }
-    
+    if (this.bgMusic.bgMusic().muted) {
+        bgMusic.bgMusic().muted = false;
+        mutebtn.style.background = "url(assets/images/unmute_icon.png) no-repeat";
+    } else {
+        bgMusic.bgMusic().muted = true;
+        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
     }
+}
     
  
 class MixOrMatch{
