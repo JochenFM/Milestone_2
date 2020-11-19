@@ -10,7 +10,7 @@ box-sizing: border-box;
 
 html {
     min-height: 100vh;
-    cursor: url(assets/cursors/female_sci.cur), auto;
+    cursor: url(/assets/cursors/female_sci.cur), auto;
 }
 
 .page-title{
@@ -124,7 +124,7 @@ transform: scale(1);
 
 .card:hover {
 
-    cursor: url("assets/cursors/FemaleIcon.cur"), auto;
+    cursor: url("/assets/cursors/FemaleIcon.cur"), auto;
 }
 
 
@@ -376,11 +376,11 @@ border: 1px solid #E63946;
 
 
 .wrapper {
-  min-height: 100vh;
   padding: 2rem 0;
-  color: #e4e4e8;
   text-align: center;
 }
+
+
 .grid-item figure {
   padding: 0;
   margin: 0;
@@ -390,8 +390,10 @@ border: 1px solid #E63946;
 
 .grid-item figure img {
   display: block;
-  max-width: 100%;
-    border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  
+  
     
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -403,57 +405,13 @@ border: 1px solid #E63946;
 
 
 
-}
 .grid-item figcaption {
   display: block;
+  font-weight: bold;
   padding: .625rem .5rem;
-  background: #474952;
+  background:#F1FAEE;
+;
 }
-
-
-/*Prize info gallery
-
-.main {
-
-    max-width: 1000px;
-    margin: auto;
-}
-
-.row {
-
-    margin: 16px;
-
-}
-
-
-.row,
-.row > .column {
-  padding: 6px;
-}
-
-.column {
-  
-float: left;
-max-width: 250px;
-max-height: 250px;
-   
-
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-.content {
-  background-color:#F1FAEE;
-  padding: 10px;
-
-}
-
-*/
 
 
 
@@ -535,7 +493,7 @@ font-weight: bold;
 
 .alertbox-header.close-button:hover {
 
-    cursor: url("assets/cursors/FemaleIcon.cur"), auto;
+    cursor: url("/assets/cursors/FemaleIcon.cur"), auto;
 }
 
 .alertbox-body {
