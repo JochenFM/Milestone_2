@@ -124,7 +124,7 @@ transform: scale(1);
 
 .card:hover {
 
-    cursor: url("/assets/cursors/FemaleIcon.cur"), auto;
+    cursor: url(/assets/cursors/FemaleIcon.cur), auto;
 }
 
 
@@ -376,7 +376,7 @@ border: 1px solid #E63946;
 
 
 .wrapper {
-  padding: 2rem 0;
+  padding: 5rem 0;
   text-align: center;
 }
 
@@ -391,10 +391,7 @@ border: 1px solid #E63946;
 .grid-item figure img {
   display: block;
   width: 100%;
-  height: 100%;
-  
-  
-    
+  height: 100%;    
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -410,7 +407,6 @@ border: 1px solid #E63946;
   font-weight: bold;
   padding: .625rem .5rem;
   background:#F1FAEE;
-;
 }
 
 
@@ -443,7 +439,7 @@ img.frame {
 
 
 
-/*Alertbox*/
+/*Alertbox
 
 .alertbox {
     position:fixed;
@@ -475,7 +471,7 @@ border-bottom: 1.5px solid black;
 
 }
 
-/*for some reason sytling of header does not show as it should, but if I change to .title only, it does*/
+/*for some reason sytling of header does not show as it should, but if I change to .title only, it does
 .alertbox-header.title {
 
 font-size: 1.25rem;

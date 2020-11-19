@@ -52,10 +52,8 @@ class AudioController {
 //background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
 var playbtn, mutebtn;
 
-
-
-//set object reference
-playbtn = document.getElementById("playToggler");
+//set object references
+ playbtn = document.getElementById("playToggler");
 mutebtn = document.getElementById("soundToggler");
 
 //add event handling
@@ -83,9 +81,9 @@ function mute() {
     } else {
         bgMusic.bgMusic().muted = true;
         mutebtn.style.background = "url(/assets/images/mute_icon.png) no-repeat";  
+
     }
-}
-    
+} 
  
 class MixOrMatch{
     constructor(totalTime, cards){
