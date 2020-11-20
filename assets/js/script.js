@@ -1,16 +1,17 @@
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('assets/sounds/bgMusic.wav');
-        this.flipSound = new Audio('assets/sounds/card-flip.wav');
-        this.matchSound = new Audio('assets/sounds/matching-hand-bells.wav');
-        this.victorySound = new Audio('assets/sounds/victory-fanfare.wav');
-        this.gameOverSound = new Audio('assets/sounds/game-over.wav');
+        this.bgMusic = new Audio('/assets/sounds/bgMusic.wav');
+        this.flipSound = new Audio('/assets/sounds/card-flip.wav');
+        this.matchSound = new Audio('/assets/sounds/matching-hand-bells.wav');
+        this.victorySound = new Audio('/assets/sounds/victory-fanfare.wav');
+        this.gameOverSound = new Audio('/assets/sounds/game-over.wav');
         this.bgMusic.loop = true;  
         this.bgMusic.volume = 0.5;  
     }
 
     startMusic() {
         this.bgMusic.play();
+
     }
     
     stopMusic() {
@@ -44,43 +45,62 @@ class AudioController {
 
     muteMusic() {
 
-        bgMusic.muted();
+        bgMusic.mute();
     }
+
 }
 
+
+let bgMusic = new AudioController();
 
 //background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
 var playbtn, mutebtn;
 
+
 //set object references
- playbtn = document.getElementById("playToggler");
-mutebtn = document.getElementById("soundToggler");
+playbtn = document.getElementById('playToggler');
+mutebtn = document.getElementById('soundToggler');
 
 //add event handling
-playbtn.addEventListener("click", playPause);
-mutebtn.addEventListener("click", mute);
+playbtn.addEventListener('click', playPause);
+mutebtn.addEventListener('click', mute);
 
-let bgMusic = new AudioController();
+//set intial button background
+mutebtn.style.background = "url(assets/images/unmute_icon.png)";
+mutebtn.style.backgroundSize = "cover";
+
+
 
 //functions
 function playPause() {
-    if (bgMusic.bgMusic().paused) {
-        bgMusic.bgMusic().play();
-        playbtn.style.background = "url(/assets/images/pause_icon.png) no-repeat"; 
+    if (bgMusic.bgMusic.paused) {
+        bgMusic.bgMusic.play();
+        playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat";
+        playbtn.style.backgroundSize = "cover";
+
+
     }
     else {
-        bgMusic.bgMusic().pause();
-        playbtn.style.background = "url(/assets/images/play_icon.png) no-repeat"; 
-    }
+        bgMusic.bgMusic.pause();
+        playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
+    }   playbtn.style.backgroundSize = "cover";
+
 }
 
 function mute() {
-    if (bgMusic.bgMusic().muted) {
-        bgMusic.bgMusic().muted = false;
-        mutebtn.style.background = "url(/assets/images/unmute_icon.png) no-repeat";
+    console.log('Clicked mute btn');
+    if (bgMusic.bgMusic.muted) {
+        console.log("Not muted");
+        console.log(bgMusic.bgMusic.muted);
+        bgMusic.stopMusic();
+        //bgMusic.bgMusic.muted = false;
+        mutebtn.style.background = "url(assets/images/unmute_icon.png)";
+        mutebtn.style.backgroundSize = "cover";
     } else {
-        bgMusic.bgMusic().muted = true;
-        mutebtn.style.background = "url(/assets/images/mute_icon.png) no-repeat";  
+        console.log("muted");
+        bgMusic.bgMusic.muted = true;
+        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
+        mutebtn.style.backgroundSize = "cover";
 
     }
 } 
@@ -235,6 +255,13 @@ victory() {
 
     }
 }
+
+
+//var imagecaption = document.getElementsByClassName('card-value');
+//imagecaption.dataset.card1.classList.add('matched');
+
+
+
 
 
 function pageRedirect() {
