@@ -359,7 +359,7 @@ border: 1px solid #E63946;
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+justify-content: center;
 }
 
 
@@ -389,13 +389,14 @@ border: 1px solid #E63946;
 }
 
 
+
 .grid-item figure img {
   display: block;
-  
   width: 100%;
   height: 100%;    
-
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 1px solid #A8DADC;
+  border-radius: 10px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
@@ -410,9 +411,23 @@ border: 1px solid #E63946;
   font-weight: bold;
   padding: .625rem .5rem;
   background:#F1FAEE;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  border: #A8DADC;
+  border-radius: 10px;
+  margin-top: 3px;
 }
 
+
+.description {
+
+    font-size: 1.2rem;
+}
+
+.description p a {
+
+    color:#A8DADC;
+    text-decoration: none;
+}
 
 
 .restart-btn {
