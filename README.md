@@ -23,6 +23,8 @@ Color composition was inspired by this picture of Margaret Martin (left) and Hel
 
 *Colour Palette*
 
+![Color](assets/images/walker_martin.png)
+
 *Images*
 
 *Typography*
@@ -61,9 +63,11 @@ Add diificulty levels for the user to choose from:
 
 * The wireframes for this project were drawn up with [Balsamiq](https://balsamiq.com/)
 
-* The Syne mono font is drawn from [Google Font](https://fonts.google.com/)
+* The Syne mono font is drawn from [Google Font](https://fonts.google.com/).
 
-* The Favicons have been created with [Favicon](https://favicon.io/)
+* The Favicons have been created with [Favicon](https://favicon.io/).
+
+Cursor
 
 * ...was inspired by code from [Stackoverflow](https://stackoverflow.com/)    
 
@@ -86,7 +90,7 @@ and diagnose problems.
 
 * Bell curve on back of the cards was purchased from [TheNounProject](https://thenounproject.com/).
 
-* All sounds were acquired from this [repository](http://dight310.byu.edu/media/audio/FreeLoops.com/2/) and [freesound](https://freesound.org/home/).
+* All sounds were acquired from this [repository](http://dight310.byu.edu/media/audio/FreeLoops.com/2/) and from [freesound](https://freesound.org/home/).
 
 
 ## 5. Testing
@@ -104,9 +108,19 @@ All text for this project was written by the developer.
 ### 7.3. Ackowledgments
 
 Memory game tutorials on the web, especially by [WebDevSimplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) 
-and [PortEXE](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) were a tremendous help.
+and [PortEXE](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) were a tremendous help. PortEXE does a great job explaining the Fisher-Yates algorithm, for instance, as well as a number of 
+other  
 
-There were other inspirations
+I was further inspired by Sandra [Israel-Ovirih's](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) and Marina [Ferreira's](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) 
+tutorials which provided helpful explanations.
+
+Page redirect between index.html and prize.html in JS was taken from [tutorialrepublic](https://www.tutorialrepublic.com/faq/how-to-redirect-to-another-web-page-using-jquery.php) and edited to suit my needs.
+
+
+Centering the mute and play buttons horizontally and vertically is inspired by [w3schools](https://www.w3schools.com/howto/howto_css_center_button.asp), whilst the JS for both buttons to function
+properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?v=hsSXzdn_0Gg) and edited to fit my code.
+
+
 
 A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
 

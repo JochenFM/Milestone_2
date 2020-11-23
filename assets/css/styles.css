@@ -58,7 +58,6 @@ font-size: 2em;
 }
 
 
-    /* idea to center buttons horizontally and vertically as below is inspired by https://www.w3schools.com/howto/howto_css_center_button.asp */
 
 
 .button-container {
@@ -128,7 +127,6 @@ transform: scale(1);
 }
 
 
-/*idea for active card on click is from Marina Ferreira under https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s (from 11:33min) */
 
 .card:active {
 
