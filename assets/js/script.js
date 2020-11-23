@@ -11,7 +11,6 @@ class AudioController {
 
     startMusic() {
         this.bgMusic.play();
-
     }
     
     stopMusic() {
@@ -38,16 +37,12 @@ class AudioController {
     }
 
     pauseMusic() {
-
         bgMusic.pause();
-
     }
 
     muteMusic() {
-
         bgMusic.mute();
     }
-
 }
 
 
@@ -69,8 +64,6 @@ mutebtn.addEventListener('click', mute);
 mutebtn.style.background = "url(assets/images/unmute_icon.png)";
 mutebtn.style.backgroundSize = "cover";
 
-
-
 //functions
 function playPause() {
     if (bgMusic.bgMusic.paused) {
@@ -88,21 +81,32 @@ function playPause() {
 }
 
 function mute() {
-    console.log('Clicked mute btn');
-    if (bgMusic.bgMusic.muted) {
-        console.log("Not muted");
-        console.log(bgMusic.bgMusic.muted);
+    if (mutebtn.style.backgroundImage === 'url("assets/images/unmute_icon.png")') {
+        // Mute Music
         bgMusic.stopMusic();
-        //bgMusic.bgMusic.muted = false;
-        mutebtn.style.background = "url(assets/images/unmute_icon.png)";
-        mutebtn.style.backgroundSize = "cover";
+        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat"
+        mutebtn.style.backgroundSize = "cover"
     } else {
-        console.log("muted");
-        bgMusic.bgMusic.muted = true;
-        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
+        // unmute Music
+        bgMusic.startMusic();
+        mutebtn.style.backgroundImage = "url(assets/images/unmute_icon.png)";
         mutebtn.style.backgroundSize = "cover";
-
     }
+    // console.log('Clicked mute btn');
+    // if (bgMusic.bgMusic.muted) {
+    //     console.log("Not muted");
+    //     console.log(bgMusic.bgMusic.muted);
+    //     bgMusic.stopMusic();
+    //     //bgMusic.bgMusic.muted = false;
+    //     mutebtn.style.background = "url(assets/images/unmute_icon.png)";
+    //     mutebtn.style.backgroundSize = "cover";
+    // } else {
+    //     console.log("muted");
+    //     bgMusic.bgMusic.muted = true;
+    //     mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
+    //     mutebtn.style.backgroundSize = "cover";
+
+    // }
 } 
  
 class MixOrMatch{
