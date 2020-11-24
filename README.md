@@ -13,21 +13,44 @@ is today. They all blazed the way despite the considerable odds against them - h
 It has been created for entertainment and educational purposes for all ages from 8 onwards. Using images from ...the game allows players to match two cards of the same character 
 image in pairs before the timer reaches zero. 
 
-Color composition was inspired by this picture of Margaret Martin (left) and Helen Walker in 1980 - what outfits!
 
 ## 2. UX ##
 
 ### 2.1. User Stories
 
+The game is designed for all age groups but in terms of difficulty level targets children between 8-14 years of age primarily. 
+I expect different user groups to have the following expectations when they come to the site for the first time:
+
+As any type of user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music.
+
+
+
 ### 2.2 Design Process
 
 *Colour Palette*
 
+Color composition was inspired by this 1980 picture of Margaret Martin (left) and Helen Walker (who is included in the memory game). 
+
 ![Color](assets/images/walker_martin.png)
+
+
+On [Coolors](https://coolors.co/) I was able to add matching colors to the above and create the following palette which is used throughout this project:
+
+![Palette](assets/images/memory_colorpalette.png)
+
+
+The red (#E63946) is obviously different from the above on Martin's outfit but its bright, almost shouty tone served well to symbolize the breakthrough these women had achieved in a 
+blue (male) dominated environment. Overall, I felt these colors complemented each other well and were fun, bright and vibrant colours keeping with the aesthetic I was aiming for, and which 
+is also reflected in the jolly background music.
+
+
+
 
 *Images*
 
 *Typography*
+
+
 
 *Wireframes*
 
@@ -40,22 +63,58 @@ I used Balsamiq to create three wireframes, for desktop, tablet, and mobile:
 ![Balsamiq wireframes](assets/wireframes/trailblazers_mobile.png)
 
 
-As can be seen, the 'game over' overlay was added for the desktop view; the 'click to start' as well as the 'victory' and 'prize' overlays were sketched out as a comment in the original Balsamiq 
-wireframe. The prize page (prize.html) was added after I realized that a portrait gallery of all eight protagonists would be 
-more informative and appealing to the user than a 'prize' overlay with a link to just one or two statisticians.  
+As can be seen, the 'game over' overlay was added for the desktop view whilst the 'click to start' as well as the 'victory' and 'prize' overlays were sketched out 
+as a comment in the original Balsamiq wireframe. The prize page (prize.html) was added after I realized that a portrait gallery of all eight protagonists would be 
+more informative and appealing to the user than a 'prize' overlay with a link to just one or two statisticians as I had originally planned.
+
 
 
 ## 3. Features ##
 
-
 ### 3.1. Existing Features ###
+
+*index.html*
+
+- [x] **Game titles**: identify the topic and the type of game with brief game instructions.
+- [x] **Click to Start overlay**: starts the game, timer and background music as and when the player is ready
+- [x] **Footer**: contains basic copyright information.
+- [x] **Mute button**: allows player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
+- [x] **Pause button**: allows the player to pause/resume the game in case his/her game is interrupted by another activity which requires full attention.
+- [x] **Flip counter**: counts the number of flips a user has made, allowing them to track their progress and compete for the lowest number of flips.
+- [x] **Timer**: displays the time remaining for the user to complete the game.
+- [x] **Game board**: displays the game cards face down ready to be clicked.
+- [x] **Game cards**: interactive on hover on the card back, their card face contains the portrait images to be matched by the user to win the game. Upon match, the name of the 
+matched statisticians appears.
+
+
+*sounds*
+
+- [x] **Background music**: starts with click to start and ends with either 'victory' or 'game over'. 
+- [x] **card flip**: triggered with every card flip and sounds as if a game card is manually flipped.
+- [x] **Game over**: triggered when timer runs out before the cards have been matched.
+- [x] **Victory**: triggered when all cards are matched before the clock runs down to 0.
+
+*win/lose overlays*
+
+- [x] **Victory overlay**: triggered when the user wins the game by finding all the matching cards within the alloted time. Winner can click on a button to be redirected to prize.html.
+- [x] **Game Over overlay**: triggered when user loses the race against the clock. User can click on button to restart another game.
+
+
+*prize.html*
+- [x] **Prize title**: gives user the option to learn more about the eight women trailblazers or click a button to restart the game rightaway.
+- [x] **Portrait gallery**: contains the same images as on the memory cards but with information on name, date of birth/death and a brief caption with the possibility to click on a link for further 
+information about the respective person.
+- [x] **Footer**: contains basic copyright information.
+
+
 
 ### 3.2. Features Left to Implement 
 
-Add diificulty levels for the user to choose from:
-- easy
-- medium
-- hard
+- [] Add difficulty levels for the user to choose from (easy, medium, hard) with more cards and/or less time to complete the game. 
+- [ ] Star rating (from 1–3) that reflects the player’s performance based on number of moves made.
+- Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
+
+
 
 
 
@@ -64,6 +123,8 @@ Add diificulty levels for the user to choose from:
 * The wireframes for this project were drawn up with [Balsamiq](https://balsamiq.com/)
 
 * The Syne mono font is drawn from [Google Font](https://fonts.google.com/).
+
+* [Coolors](https://coolors.co/) to generate the color palette used across this project.
 
 * The Favicons have been created with [Favicon](https://favicon.io/).
 
