@@ -236,7 +236,7 @@ Here are some of the
 Now we can come back to some of the user stories mentioned above (2.1) to see how the requirements have been met:
 
 - "As a general user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music."
-    - 
+    - The color palette as well as several hover-over features and sound animations, combined with a meaningful content, make this a fun game to play.
 - "As a general user, I would enjoy learning something meaningful while playing a game." 
     - The game contains images of hitherto under-represented female statisticians who had a significant impact on the field of statistics and beyond.
 - "As a general user, I would like to be able to track my progress."
@@ -258,7 +258,7 @@ As a child (age 6-14), I would like to:
 As a parent, I would like my child to:
 
 - play a game which is safe to use in terms of content.
-    - all content is safe to use and highly interesting especially for older children and adults with an interest in science and gender.
+    - All content is safe to use and highly interesting, especially for older children and adults with an interest in science and gender.
 - play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty.
     - The amount of cards and the race against the cloclk add difficulty to the game, whilst training memory and visual skills.
 - play a game that teaches something about the world. 
@@ -281,6 +281,12 @@ All of these issues except the music issue, were resolved by moving the <script 
 from the header of the HTML pages to below the footer inside the body tag.
 
 In MS Explorer, game would not even start and all cards were aligned in one single row.
+
+
+
+See here discussion with Benga on slack
+
+
 
 
 2. Persisting bugs
