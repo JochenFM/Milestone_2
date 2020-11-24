@@ -22,7 +22,7 @@ The game is designed for all age groups but in terms of difficulty level targets
 I expect different user groups to have the following expectations when they come to the site:
 
 - As a general user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music.
-- As a general user, I would enjoy viewing and matching images of female statisticians who had a significant impact on the field of statistics.
+- As a general user, I would enjoy learning something meaningful while playing a game. 
 - As a general user, I would like to play a game that does not take too long but posits a small challenge.
 - As a general user, I would like to be able to track my progress.
 - As a general user, I would like to practice my memory skills.
@@ -200,12 +200,100 @@ Lighthouse was used to test the performance of the application on both pages (in
 The following reports were generated:
 
 
+*index.html - Desktop:*
+
+- Please click the links below to view the reports:
+
+    - [Performance]() report
+    - [Accessibility]() report
+    - [Best practices & SEO]() report
+
+
+*prize.html - Desktop:*
+
+
+
+*index.html - Mobile:*    
+
+*prize.html - Mobile:*
+
+
+
+
 
 
 
 ### 5.2 Manual Testing
 
+The application was tested across Google Chrome, Firefox, Microsoft Edge, Explorer and Safari browsers to ensure everything worked as it should and to identify issues/bugs.
+
+Developer tools in Chrome were also used during the creation phases for the various viewport sizes.
+
+Here are some of the 
+
+
+
+Now we can come back to some of the user stories mentioned above (2.1) to see how the requirements have been met:
+
+- "As a general user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music."
+    - 
+- "As a general user, I would enjoy learning something meaningful while playing a game." 
+    - The game contains images of hitherto under-represented female statisticians who had a significant impact on the field of statistics and beyond.
+- "As a general user, I would like to be able to track my progress."
+    - The timer and flip counter allow users to track their progress throughout the game.
+- "As a general user, I would like to practice my memory skills."
+    - Playing a card matching game can help improve memory skills.
+- "As a general user, I would like to enjoy a simple memory game that provides a 'reward' for completion and let's me learn something."
+    - The game does not just end on 'Victory' but provides a prize site with useful further information on the topic for anybody who would like to know more.
+
+As a child (age 6-14), I would like to:
+
+- easily navigate around the game and understand all commands and messages.
+    - Navigation through this game is clearly defined through colours, buttons, and other layout features.
+- play a game that is fun and looks nice.
+    - Bright, vibrant colours, interesting images of female characters, music, and animations make this a fun game to play whilst the running clock 
+        adds a bit of thrill and challenge 
+
+
+As a parent, I would like my child to:
+
+- play a game which is safe to use in terms of content.
+    - all content is safe to use and highly interesting especially for older children and adults with an interest in science and gender.
+- play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty.
+    - The amount of cards and the race against the cloclk add difficulty to the game, whilst training memory and visual skills.
+- play a game that teaches something about the world. 
+    - Anybody who cares to read on (on prize.html) about these outstanding women will notice that they all have been mentors and inspirations to generations of statisticians - both male and emale - and are 
+    role models for us today.
+
+
 ### 5.3 Bugs and Solutions
+
+1. Resolved Bugs
+
+*Browser Testing*
+
+In Safari and Firefox, the time ran twice as fast taking away two digits every second from the timer and it would run into negative time (below zero) after 'Game Over'. 
+
+Additionally, in Safari, all cards were shown card face up (visible) by default, and in MS Edge the game would start with the wrong overlay visible. 
+Music would not start playing in neither of them.
+
+All of these issues except the music issue, were resolved by moving the <script src="assets/js/script.js" async></script>
+from the header of the HTML pages to below the footer inside the body tag.
+
+In MS Explorer, game would not even start and all cards were aligned in one single row.
+
+
+2. Persisting bugs
+
+
+- bell sound when cards matched is coming on irregularly
+- customized cursors (female scientist and female icon) do not load and cursor image does not change on hovering over areas.
+- Some images of the portrait gallery on prize.html are of different sizes.
+- Music OK?
+
+
+
+
 
 
 
@@ -262,6 +350,7 @@ properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?
 
 The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
+Animated image overlay on matched cards was inspired by [cssscript](https://www.cssscript.com/animated-image-hover-overlay-with-image-scale/) and edited to suit my needs. 
 
 A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
 
