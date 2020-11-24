@@ -18,12 +18,30 @@ image in pairs before the timer reaches zero.
 
 ### 2.1. User Stories
 
-The game is designed for all age groups but in terms of difficulty level targets children between 8-14 years of age primarily. 
-I expect different user groups to have the following expectations when they come to the site for the first time:
+The game is designed for all age groups but in terms of difficulty level targets children between 6-14 years of age primarily. 
+I expect different user groups to have the following expectations when they come to the site:
 
-As any type of user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music.
+- As a general user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music.
+- As a general user, I would enjoy viewing and matching images of female statisticians who had a significant impact on the field of statistics.
+- As a general user, I would like to play a game that does not take too long but posits a small challenge.
+- As a general user, I would like to be able to track my progress.
+- As a general user, I would like to practice my memory skills.
+- As a general user, I would like to enjoy a simple memory game that provides a 'reward' for completion and let's me learn something.
+
+As a child (age 6-14), I would like to:
+
+- easily navigate around the game and understand all commands and messages.
+- play a game that is inuitive.
+- play a game that is fun and looks nice.
+- play a game that rewards me for winning.
 
 
+As a parent, I would like my child to:
+
+- play a game which is safe to use in terms of content.
+- play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty.
+- play a game which enhances their memory skills.
+- play a game that teaches something about the world. 
 
 ### 2.2 Design Process
 
@@ -76,7 +94,7 @@ more informative and appealing to the user than a 'prize' overlay with a link to
 *index.html*
 
 - [x] **Game titles**: identify the topic and the type of game with brief game instructions.
-- [x] **Click to Start overlay**: starts the game, timer and background music as and when the player is ready
+- [x] **Click to Start overlay**: starts the game, timer and background music as and when the player is ready.
 - [x] **Footer**: contains basic copyright information.
 - [x] **Mute button**: allows player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
 - [x] **Pause button**: allows the player to pause/resume the game in case his/her game is interrupted by another activity which requires full attention.
@@ -102,17 +120,17 @@ matched statisticians appears.
 
 *prize.html*
 - [x] **Prize title**: gives user the option to learn more about the eight women trailblazers or click a button to restart the game rightaway.
-- [x] **Portrait gallery**: contains the same images as on the memory cards but with information on name, date of birth/death and a brief caption with the possibility to click on a link for further 
-information about the respective person.
+- [x] **Portrait gallery**: contains the same images as on the memory cards but with information on name, date of birth/death and a brief image caption with the possibility to click on 
+a link for further information about the respective person.
 - [x] **Footer**: contains basic copyright information.
 
 
 
 ### 3.2. Features Left to Implement 
 
-- [] Add difficulty levels for the user to choose from (easy, medium, hard) with more cards and/or less time to complete the game. 
+- [ ] Add difficulty levels for the user to choose from (easy, medium, hard) with more cards and/or less time to complete the game. 
 - [ ] Star rating (from 1–3) that reflects the player’s performance based on number of moves made.
-- Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
+- [ ] Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
 
 
 
@@ -124,7 +142,7 @@ information about the respective person.
 
 * The Syne mono font is drawn from [Google Font](https://fonts.google.com/).
 
-* [Coolors](https://coolors.co/) to generate the color palette used across this project.
+* [Coolors](https://coolors.co/) was used to generate the color palette.
 
 * The Favicons have been created with [Favicon](https://favicon.io/).
 
@@ -145,7 +163,7 @@ and diagnose problems.
 
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) to test the performance of the website.
 
-* [AmiResponsiveDesign](.http://ami.responsivedesign.is) to test responsive design on various devices.
+* [AmiResponsiveDesign](http://ami.responsivedesign.is) to test responsive design on various devices.
 
 * Portrait images were sourced from wikipedia.
 
@@ -156,7 +174,68 @@ and diagnose problems.
 
 ## 5. Testing
 
+### 5.1 Automatic Testing
+
+Automated and manual testing were conducted during this project. 
+
+1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which returned "Congratulations! No Error Found"
+ "Document checking completed. No errors or warnings to show" respectively.
+
+
+2. I used [AmiResponsiveDesign](.http://ami.responsivedesign.is) to create the following test result: 
+
+- insert PNG
+
+
+As can be seen, all pages, links, icons performed as expected on all devices (with the exception of the hero image on the iPhone)
+
+
+3. JShint
+
+
+- insert metrics here as screenshot
+
+Lighthouse was used to test the performance of the application on both pages (index.html and prize.html) on mobile and desktop.
+
+The following reports were generated:
+
+
+
+
+
+### 5.2 Manual Testing
+
+### 5.3 Bugs and Solutions
+
+
+
+
+
 ## 6. Deployment
+
+1. I created a Github account under [JochenFM](https://github.com/JochenFM)
+
+2. I committed and pushed all files for this project to my Github repistory [Milestone2](https://github.com/JochenFM/Milestone_2)
+
+3. To make my website live and working for other people to look at, I followed the 
+steps outlined [here](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site): 
+In my repository, I went to 'Settings', then scrolled down to 'Github Pages'. 
+Under the Source setting, I used the drop-down menu to select 'master branch' as a publishing source and saved it. 
+Upon refreshing the github page, I was issued the url where my page is published, namely "Your site is published at https://jochenfm.github.io/Milestone_2/"
+
+To pull my code from my Github repository to run it on another machine, one would go to my [repository](https://github.com/JochenFM/Milestone_2) and on the 
+main page one would then click the green button 'Code' with a downward pointing arrow, on the right hand side just above the files. This button will give 
+options to 'clone with HTTPS', or 'Open with Github Desktop', or 'Download ZIP'. 
+
+To continue with cloning, one would then:
+
+* open Git Bash,
+* change the current working directory to the location where one wants the cloned directory to be made,
+* type 'git clone', and then paste this URL; https://github.com/JochenFM/Milestone_2 
+* press 'Enter' to create the local clone.
+
+See also [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more information on the process.
+
 
 ## 7. Credits
 
@@ -181,10 +260,10 @@ Page redirect between index.html and prize.html in JS was taken from [tutorialre
 Centering the mute and play buttons horizontally and vertically is inspired by [w3schools](https://www.w3schools.com/howto/howto_css_center_button.asp), whilst the JS for both buttons to function
 properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?v=hsSXzdn_0Gg) and edited to fit my code.
 
+The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
 
 A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
 
-The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
 
