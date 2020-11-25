@@ -54,19 +54,41 @@ Color composition was inspired by this 1980 picture of Margaret Martin (left) an
 
 On [Coolors](https://coolors.co/) I was able to add matching colors to the above and create the following palette which is used throughout this project:
 
-![Palette](assets/images/memory_colorpalette.png)
+![Palette](assets/images/memory_colorpalette_small.png)
 
 
 The red (#E63946) is obviously different from the above on Martin's outfit but its bright, almost shouty tone served well to symbolize the breakthrough these women had achieved in a 
-blue (male) dominated environment. Overall, I felt these colors complemented each other well and were fun, bright and vibrant colours keeping with the aesthetic I was aiming for, and which 
+blue (male) dominated environment. Overall, I felt these colors complemented each other well and were fun, bright and vibrant in keeping with the aesthetic I was aiming for, and which 
 is also reflected in the jolly background music.
 
 
 
 
-*Images*
+*Icons*
+
+For the back of the cards, I chose two icons which represent the topic as best as possible, I think: the gender symbol for female and the 'bell curve', a visualisation of the 
+normal distribution for a variable. The term 'bell curve' originates from the fact that the graph used to depict a normal distribution consists of a symmetrical bell-shaped curve. 
+Since both icons represent the respective field this game is about - women and statistics - in a common and popular way, I felt they should on the back of the cards.
+
 
 *Typography*
+
+I chose Syne Mono for the entire project because I liked the aesthetic and thought that the way its creators [described](https://www.1001fonts.com/syne-font.html) it 
+as giving the "type's contours a unique treatment, mixing arcs and straight lines in a completely unorthodox and vivacious way...\[integrating\] a desired lost \[sic!\] of control, 
+an aceptance of error..." speaks to the topic of this game which is 'against the odds', breakthrough, change, and difference.
+
+
+*Animations*
+
+I added animations on hover on the back of the cards to alert the user that these can be clicked. The change of size of the cards on click simulates the grasping of a card jusst before 
+it is flipped. The shadows on hover behind the portrait images is just a nice addition to make it a little more 3D.
+
+*Sound*
+
+I loved the idea of a game with sounds and feel the background music conveys a happy and fun atmosphere for playing the game while also pushing the user to finish in time as the beat is exactly in tune
+with the decrementing seconds. The flip sound for the cards adds a real-world experience of playing cards for the user, while the hand bells on matching is a nice addition to alert the user
+to his/her success. The victory fanfare constitutes a neat yet solemn break with the background music, while the Tom & Jerry-like game over-sound really drives the message home 
+to the user: you are out.
 
 
 
@@ -135,7 +157,6 @@ a link for further information about the respective person.
 
 
 
-
 ## 4. Technologies Used
 
 * The wireframes for this project were drawn up with [Balsamiq](https://balsamiq.com/)
@@ -197,7 +218,7 @@ As can be seen, all pages, links, icons performed as expected on all devices (wi
 
 Lighthouse was used to test the performance of the application on both pages (index.html and prize.html) on mobile and desktop.
 
-The following reports were generated:
+The following reports were generated: - add via uploading screenshots on igur, or by adding them to the files
 
 
 *index.html - Desktop:*
@@ -233,6 +254,30 @@ Here are some of the
 
 
 
+
+
+
+*Game Functionality*
+
+I played the game repeatedly to test functionality and invited the entire family and some of my friends to play and test. The game has thus been played by user aged between 6 and 64.
+Collectively, it was shown that:
+
+- game is winable within the alotted time for young and old, 
+- timer and background music starts when Click to Start overlay is clicked,
+- matched pairs are disabled and cannt be clicked again,
+- if pairs are matched, bell sound is triggered (although intermittently only),
+- repeated clicks on matching pairs does not effect click counter and matched cards are only counted as one match,
+- time running out before all pairs are found triggers Game Over Overlay and Game Over Sound,
+- matching pairs stay face up,
+- cards stay face-up long enough for user to see images,
+- flipped cards that are not a match return to default position face-down,
+- all pairs found within alotted time triggers Victory Overlay and Sound,
+- timer stops when game is won,
+- user can proceed via Victory overlay to prize.html,
+- from prize.html user can click back to restart the game.
+
+
+
 Now we can come back to some of the user stories mentioned above (2.1) to see how the requirements have been met:
 
 - "As a general user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music."
@@ -248,20 +293,20 @@ Now we can come back to some of the user stories mentioned above (2.1) to see ho
 
 As a child (age 6-14), I would like to:
 
-- easily navigate around the game and understand all commands and messages.
+- "easily navigate around the game and understand all commands and messages."
     - Navigation through this game is clearly defined through colours, buttons, and other layout features.
-- play a game that is fun and looks nice.
+- "play a game that is fun and looks nice."
     - Bright, vibrant colours, interesting images of female characters, music, and animations make this a fun game to play whilst the running clock 
         adds a bit of thrill and challenge 
 
 
 As a parent, I would like my child to:
 
-- play a game which is safe to use in terms of content.
+- "play a game which is safe to use in terms of content."
     - All content is safe to use and highly interesting, especially for older children and adults with an interest in science and gender.
-- play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty.
+- "play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty."
     - The amount of cards and the race against the cloclk add difficulty to the game, whilst training memory and visual skills.
-- play a game that teaches something about the world. 
+- "play a game that teaches something about the world." 
     - Anybody who cares to read on (on prize.html) about these outstanding women will notice that they all have been mentors and inspirations to generations of statisticians - both male and emale - and are 
     role models for us today.
 
