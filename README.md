@@ -328,9 +328,47 @@ from the header of the HTML pages to below the footer inside the body tag.
 In MS Explorer, game would not even start and all cards were aligned in one single row.
 
 
+Here are some of the bugs I encountered and my approach to fix them:
 
-See here discussion with Benga on slack
+added startGame function, added empty matchedCards array and three options when user is not allowed to flip another card which is a Boolean, 
+but spelled outin super complicated, negative way, and added flipCard function but nothing work
+- canFlipCard(card) {
+        return true;
+        //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
 
+Explain this function
+
+
+oh my God flip, music and shuffle all work now. game.startGame in rea…
+
+…dy function was commented out and should not have
+overlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+
+             overlay.classList.remove('visible');   
+            //game.startGame(); This was commented out
+            game.startGame();
+
+
+startCountDown function is now working as I spotted a time (capital T…
+
+… where there shold be a t)but game over function is not called for some reason even thoough I spotted another typo (
+, where a . should go). Added victory function but not tested yet
+
+StartCountDown() {
+    return setInterval(() => {
+        this.TimeRemaining --; - this was changed into the one below:
+        this.timeRemaining --;
+        this.timer.innerText = this.timeRemaining;
+
+
+
+
+getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src; //gets the card in HTML by the class indicated, as it is only one, it is 0 (=zero-index), 
+                                                                //and then the source attribute
+
+I forgot the 0 initially
 
 
 
@@ -402,6 +440,9 @@ properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?
 The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
 Animated image overlay on matched cards was inspired by [cssscript](https://www.cssscript.com/animated-image-hover-overlay-with-image-scale/) and edited to suit my needs. 
+
+Thanks also to tutors Samantha Dartnell, Johann Alberts, and Michael Park for going with me through the play/pause and un/mute functions and buttons, and to my fellow students on Slack,
+especially those who also coded memory games in the past.
 
 A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
 
