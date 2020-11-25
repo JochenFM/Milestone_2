@@ -117,7 +117,10 @@ class MixOrMatch{
     this.timer = document.getElementById('time-remaining');
     this.ticker = document.getElementById('flips');
     this.audioController = new AudioController();
-    }
+    //var imagecaption = document.getElementsByClassName('card-value');
+
+}
+
 
 
     //is called whenever Game starts and hence I need to set here all properties that I need for when game starts
@@ -181,12 +184,17 @@ hideCards() {
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);//push card into empty array
         this.matchedCards.push(card2);
-        card1.classList.add('matched');
-        card2.classList.add('matched');//this should add the animation in CSS I got from codepen.com
+        //imagecaption.dataset.card1.classList.add('matched');
+        //imagecaption.dataset.card1.classList.add('matched');
+        //card1.classList.add('matched');
+        //card2.classList.add('matched');//this should add the animation in with image caption and resizing of image
         this.audioController.match();
         if(this.matchedCards.length === this.cardsArray.length) //if these two have the same length I know it is victory
             this.victory(); 
     }
+
+
+
 
 //in case of mismatch visible attribute is removed, i.e. cards turn back on their face, but with 1s delay. THis busy=true means that for this second no clicks anywhere else are possible
 //then after 1 s: this.busy=false
@@ -261,8 +269,6 @@ victory() {
 }
 
 
-//var imagecaption = document.getElementsByClassName('card-value');
-//imagecaption.dataset.card1.classList.add('matched');
 
 
 

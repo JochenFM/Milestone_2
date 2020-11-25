@@ -153,6 +153,9 @@ a link for further information about the respective person.
 - [ ] Add difficulty levels for the user to choose from (easy, medium, hard) with more cards and/or less time to complete the game. 
 - [ ] Star rating (from 1–3) that reflects the player’s performance based on number of moves made.
 - [ ] Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
+- [ ] The animated image overlay which is currently onmouseover in JS was originally planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
+with which I planned to target the overlay, but I found this too difficult to implement, especially because sixteen cards needed to be matched intp pairs and thus animated, and the imagecaption overlay
+needed to be undone after every game over or victory.
 
 
 
@@ -328,7 +331,36 @@ from the header of the HTML pages to below the footer inside the body tag.
 In MS Explorer, game would not even start and all cards were aligned in one single row.
 
 
-Here are some of the bugs I encountered and my approach to fix them:
+
+In the coding process, I encountered a number of minor bugs such as absent 
+or inconsistent camelCases, or capital letters at the beginning of a variable. I also had commented out vital functions for testing reasons, such as game.StartGame(), 
+and forgot to uncomment them until I noticed.  
+Also, when coding the play/pause and un/mute functions, I initially did not insert the corresponding methods in my  
+muteMusic() {
+        bgMusic.mute();
+pauseMusic() {
+        bgMusic.pause();
+    }
+
+in my AudioController class 
+
+
+Always use the "new" keyword whenever you want to use a method within a class
+
+
+
+
+Here are some of the more substantial bugs I encountered and my approach to fix them:
+
+
+
+- 
+
+getCardType(card) {
+        return card.getElementsByClassName('card-value')[0].src; //gets the card in HTML by the class indicated, as it is only one, it is 0 (=zero-index), 
+                                                                //and then the source attribute
+
+
 
 added startGame function, added empty matchedCards array and three options when user is not allowed to flip another card which is a Boolean, 
 but spelled outin super complicated, negative way, and added flipCard function but nothing work
@@ -336,39 +368,12 @@ but spelled outin super complicated, negative way, and added flipCard function b
         return true;
         //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
 
-Explain this function
+This function is meant to check the conditions under which cards must not be flipped, and there are three of them. The first is that card must not be flipped if this.busy which might represent
+an animation or anything like that and user is not allowed to click on anything until this is finished. The second is an unallowed click on cards that are already matched and lay face-up and
+a further click would run the flipCard function. The third case is an unallowed click on a card that is already flipped waiting face up to be matched.
+Solution was taken from [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=1259s) min 21:00
 
-
-oh my God flip, music and shuffle all work now. game.startGame in rea…
-
-…dy function was commented out and should not have
-overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-
-             overlay.classList.remove('visible');   
-            //game.startGame(); This was commented out
-            game.startGame();
-
-
-startCountDown function is now working as I spotted a time (capital T…
-
-… where there shold be a t)but game over function is not called for some reason even thoough I spotted another typo (
-, where a . should go). Added victory function but not tested yet
-
-StartCountDown() {
-    return setInterval(() => {
-        this.TimeRemaining --; - this was changed into the one below:
-        this.timeRemaining --;
-        this.timer.innerText = this.timeRemaining;
-
-
-
-
-getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src; //gets the card in HTML by the class indicated, as it is only one, it is 0 (=zero-index), 
-                                                                //and then the source attribute
-
-I forgot the 0 initially
+So all three are negative statements will hzave to be fulfilled and the function returns 'true'.
 
 
 
