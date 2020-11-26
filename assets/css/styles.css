@@ -152,17 +152,17 @@ transform: scale(1);
 
 
 
-/*.card-face div {
+.card-value div {
 
 display: table-cell;
-  vertical-align: bottom;
-  position: relative;
-  top: 20px;
-  opacity: 0;
-  color: #F1FAEE;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+vertical-align: bottom;
+position: relative;
+top: 20px;
+opacity: 0;
+color: #F1FAEE;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
 
 }
 
@@ -175,7 +175,7 @@ display: table-cell;
 
 /*  JS as it is now adds matched attribute to card div not to card-front, so I would need to add another line of code to cardMatch() that adds matched to card-front*/
 
-/*.card-front:hover div{
+.card-front:hover div{
  background: rgba(20, 19, 19, 0.5);
 }
 

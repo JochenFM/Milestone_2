@@ -149,7 +149,7 @@ hideCards() {
 
     this.cardsArray.forEach(card =>{
         card.classList.remove('visible');
-        card.classList.remove('matched'); //unclear whether I need this as I do not have a matched class in HTML
+        card.classList.remove('caption'); //unclear whether I need this as I do not have a matched class in HTML
     });
 }
    
@@ -186,13 +186,13 @@ hideCards() {
         this.matchedCards.push(card2);
         //imagecaption.dataset.card1.classList.add('matched');
         //imagecaption.dataset.card1.classList.add('matched');
-        //card1.classList.add('matched');
-        //card2.classList.add('matched');//this should add the animation in with image caption and resizing of image
+        //card1.classList.add('caption');
+        //card2.classList.add('caption');
         this.audioController.match();
         if(this.matchedCards.length === this.cardsArray.length) //if these two have the same length I know it is victory
             this.victory(); 
-    }
 
+    }
 
 
 
@@ -203,6 +203,8 @@ hideCards() {
         setTimeout(() => {
             card1.classList.remove('visible');
             card2.classList.remove('visible');
+            //card1.classList.remove('caption');
+            //card2.classList.remove('caption');
             this.busy=false;
         }, 1000);
     }
@@ -269,7 +271,16 @@ victory() {
 }
 
 
+//document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
+    //document.getElementsByClassName("caption").onmouseout = function() {mouseOut()};
 
+//function mouseOver() {
+  //document.getElementsByClassName("caption").style.backgroundImage = "red";
+//}
+
+//function mouseOut() {
+  //document.getElementById("caption").style.backgroundImage = "black";
+//}
 
 
 
