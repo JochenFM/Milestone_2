@@ -5,13 +5,13 @@
 
 ## 1. Overview ##
 
-This memory was planned and coded with my daughters and every other girl (and boy!) in mind. Statistical sciences, like many other disciplines in Science, Technology, 
-Engineering and Mathematics (STEM) are still very much male dominated and I wanted show that success and great performances are possible for women by designing this game around eight
-women who were trailblazers and outstanding contributors to Statistics. All of them succeeded at a time when the profession was even more unfavourable for female - or indeed any other - than it 
-is today. They all blazed the way despite the considerable odds against them - hence my title.
+This memory game was planned and coded with my daughters and every other girl (and boy!) in mind. Statistical sciences, like many other disciplines in Science, Technology, 
+Engineering and Mathematics (STEM) are still very much male dominated and I wanted to show that success and great performances are possible for women by designing this game around eight
+women who were trailblazers and outstanding contributors to Statistics. All of them succeeded at a time when the profession was even more unfavourable for female - or indeed any other under-represented - voices 
+than it is today. They all blazed the way despite the considerable odds against them - hence my title.
 
-It has been created for entertainment and educational purposes for all ages from 8 onwards. Using images from ...the game allows players to match two cards of the same character 
-image in pairs before the timer reaches zero. 
+It has been created for entertainment and educational purposes for all ages from 7 onwards. Using images from the public domain as card faces, the game allows players to match two 
+cards of the same character image in pairs before the timer reaches zero. 
 
 
 ## 2. UX ##
@@ -57,7 +57,7 @@ On [Coolors](https://coolors.co/) I was able to add matching colors to the above
 ![Palette](assets/images/memory_colorpalette_small.png)
 
 
-The red (#E63946) is obviously different from the above on Martin's outfit but its bright, almost shouty tone served well to symbolize the breakthrough these women had achieved in a 
+The red (#E63946) is obviously different from the above of Martin's outfit but its bright, almost shouty tone served well to symbolize the breakthrough these women had achieved in a 
 blue (male) dominated environment. Overall, I felt these colors complemented each other well and were fun, bright and vibrant in keeping with the aesthetic I was aiming for, and which 
 is also reflected in the jolly background music.
 
@@ -68,7 +68,7 @@ is also reflected in the jolly background music.
 
 For the back of the cards, I chose two icons which represent the topic as best as possible, I think: the gender symbol for female and the 'bell curve', a visualisation of the 
 normal distribution for a variable. The term 'bell curve' originates from the fact that the graph used to depict a normal distribution consists of a symmetrical bell-shaped curve. 
-Since both icons represent the respective field this game is about - women and statistics - in a common and popular way, I felt they should on the back of the cards.
+Since both icons represent the respective field this game is about - women and statistics - in a common and popular way, I felt they should go on the back of the cards.
 
 
 *Typography*

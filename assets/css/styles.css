@@ -13,6 +13,8 @@ html {
     cursor: url(/assets/cursors/female_sci.cur), auto;
 }
 
+/* titles and game container index.html*/
+
 .page-title{
 
 color: #E63946;
@@ -59,6 +61,21 @@ font-size: 2em;
 
 
 
+/*game buttons*/
+
+
+.prize-btn {
+
+font-family: 'Syne Mono', monospace, serif;
+font-size: 2rem;
+color:#E63946;
+margin-top: 1rem;
+background-color: transparent;
+border: 1px solid #E63946;
+
+}
+
+
 
 .button-container {
 
@@ -76,6 +93,9 @@ font-size: 2em;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+
+
 
 
 
@@ -111,6 +131,7 @@ font-size: 2em;
 }
 
 
+/*cards and animation*/
 
 
 .card {
@@ -194,7 +215,6 @@ text-align: center;
 
 
 
-/*.card:hover needs to go out here for .card.visible for actual game, in both lines*/
 .card.visible .card-back{
 
 transform: rotateY(-180deg);
@@ -272,21 +292,12 @@ height: 100%;
 width: 100%;
 position: absolute;
 border-radius: 12px;
-/*transition: .4s ease-in-out;
-transition above is part of the animation mentioned below taken from codepen*/
-}
-
-
-/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 1) .card:hover needs to be changed back into .card.matched for JS
-
-.card.matched .card-value{
-
-
-animation: 1s matchAnim ease-in-out;
-animation-delay: .5s;
 
 }
-*/
+
+
+/*overlays*/
+
 
 .overlay-text{
     display: none;
@@ -326,26 +337,11 @@ font-size: 5.5rem;
 }
 
 
-.prize-bio a{
-
-    color: #E63946;
-}
 
 
-.prize-btn {
+/*prize.html*/
 
-font-family: 'Syne Mono', monospace, serif;
-font-size: 2rem;
-color:#E63946;
-margin-top: 1rem;
-background-color: transparent;
-border: 1px solid #E63946;
-
-}
-
-
-
-/*Prize info gallery*/
+/* info image gallery*/
 
 .grid {
   max-width: 1100px;
@@ -428,6 +424,9 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 
+
+/*buttons*/
+
 .restart-btn {
 
 font-family: 'Syne Mono', monospace, serif;
@@ -442,105 +441,7 @@ margin: 0 auto;
 }
 
 
-/* Responsive picture frame taken from https://codepen.io/dudleystorey/pen/yyZpeX */
-img.frame {
-  border-image: url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch; 
-  border-color: #f4be52;
-  border-style: inset;
-  border-width: 60px;
-  display: block;
-  width: 120%;
-  height: auto;
-  background-color: black;
-  margin: 0;
-}
-
-
-
-/*Alertbox
-
-.alertbox {
-    position:fixed;
-    top: 70%;
-    left: 80%;
-    transform: translate(-50%, -80%) scale(0);
-    transition: 200ms ease-in-out;
-    border: 2px solid #E63946;
-    border-radius: 10px;
-    z-index: 10;
-    background-color:#F1FAEE;
-    width: 500px;
-    max-width: 80%;
-}
-
-
-.alertbox.active {
-
-transform: translate(-50%, -80%) scale(1);
-}
-
-.alertbox-header{
-
-padding: 10px 15px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: 1.5px solid black;
-
-}
-
-/*for some reason sytling of header does not show as it should, but if I change to .title only, it does
-.alertbox-header.title {
-
-font-size: 1.25rem;
-font-weight: bold;
-}
-
-.alertbox-header .close-button {
-
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.alertbox-header.close-button:hover {
-
-    cursor: url("/assets/cursors/FemaleIcon.cur"), auto;
-}
-
-.alertbox-body {
-
-    padding: 10px 15px;
-}
-
-
-/*#overlay {
-
-    position: fixed;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /*z-index: 100;*/
-    /*background-color: rgba(0,0,0,.8);
-    pointer-events: none;
-    /*so that the overlay won't capture click events, so to be able to click on anything outside the modal when the overlay is not active*/
-
-/*}
-
-
-#overlay.active {
-
-opacity: 1;
-pointer-events: all;
-
-}*/
-
-
+/*footer*/
 
 footer {
 
@@ -564,7 +465,7 @@ footer {
 
 
 
-
+/* media responsiveness*/
 
 
 
@@ -580,17 +481,7 @@ footer {
 
 }
 
-/*Aninmation below is inspired by memory game under https://codepen.io/natewiley/pen/HBrbL (Part 2)*/
 
-
-@keyframes matchAnim {
-	0% { 
-		background: #E63946;
-	}
-	100% {
-		background: #A8DADC;
-	}
-}
 
 
 @media (max-width: 900px) {
@@ -611,7 +502,7 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-
+/*
   img.frame { 
     border-width: 0px;
     width: 100%; }
