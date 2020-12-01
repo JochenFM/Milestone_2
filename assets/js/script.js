@@ -117,7 +117,7 @@ class MixOrMatch{
     this.timer = document.getElementById('time-remaining');
     this.ticker = document.getElementById('flips');
     this.audioController = new AudioController();
-    //var imagecaption = document.getElementsByClassName('card-value');
+    
 
 }
 
@@ -184,10 +184,8 @@ hideCards() {
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);//push card into empty array
         this.matchedCards.push(card2);
-        //imagecaption.dataset.card1.classList.add('matched');
-        //imagecaption.dataset.card1.classList.add('matched');
-        //card1.classList.add('caption');
-        //card2.classList.add('caption');
+        card1.classList.add('caption');
+        card2.classList.add('caption');
         this.audioController.match();
         if(this.matchedCards.length === this.cardsArray.length) //if these two have the same length I know it is victory
             this.victory(); 
@@ -203,8 +201,8 @@ hideCards() {
         setTimeout(() => {
             card1.classList.remove('visible');
             card2.classList.remove('visible');
-            //card1.classList.remove('caption');
-            //card2.classList.remove('caption');
+            card1.classList.remove('caption');
+            card2.classList.remove('caption');
             this.busy=false;
         }, 1000);
     }
@@ -271,8 +269,16 @@ victory() {
 }
 
 
-//document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
+function addCaption (){
+
+    let imagecaption = document.getElementsByClassName('card-value').style.background="red";
+
+
+document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
     //document.getElementsByClassName("caption").onmouseout = function() {mouseOut()};
+
+
+}
 
 //function mouseOver() {
   //document.getElementsByClassName("caption").style.backgroundImage = "red";

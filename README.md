@@ -373,14 +373,20 @@ an animation or anything like that and user is not allowed to click on anything 
 a further click would run the flipCard function. The third case is an unallowed click on a card that is already flipped waiting face up to be matched.
 Solution was taken from [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=1259s) min 21:00
 
-So all three are negative statements will hzave to be fulfilled and the function returns 'true'.
+So all three are negative statements will have to be fulfilled and the function returns 'true'.
+
+
+
+The shuffle algorithm is based on pseudo-code...and also explained well here by Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 31:07 min) 
+although slightly different as shuffle() is wrapped inside an extra pair of parenthesis which makes it into a 
+IIFE=Immediately Invoked Function Expression which means that function will be executed right after its definition. 
 
 
 
 2. Persisting bugs
 
 
-- bell sound when cards matched is coming on irregularly
+- bell sound when cards matched sounds irregularly;
 - customized cursors (female scientist and female icon) do not load and cursor image does not change on hovering over areas.
 - Some images of the portrait gallery on prize.html are of different sizes.
 - Music OK?

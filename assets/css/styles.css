@@ -107,7 +107,7 @@ border: 1px solid #E63946;
     border: solid 2px #E63946;
     border-radius: .5rem;
     outline: none;
-    background-image:url(https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg) no-repeat;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg') no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #F1FAEE;
@@ -123,7 +123,7 @@ border: 1px solid #E63946;
     border: solid 2px #E63946;
     border-radius: .5rem;
     outline: none;
-    background-image:url(assets/images/pause_icon.png) no-repeat;
+    background: url('assets/images/pause_icon.png') no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #F1FAEE;
@@ -170,48 +170,6 @@ transform: scale(1);
     backface-visibility: hidden;
     transition: transform 500ms ease-in-out; 
 }
-
-
-
-.card-value div {
-
-display: table-cell;
-vertical-align: bottom;
-position: relative;
-top: 20px;
-opacity: 0;
-color: #F1FAEE;
-font-weight: bold;
-text-transform: uppercase;
-text-align: center;
-
-}
-
-.card-front img{
-  -webkit-transition: all 0.5s linear;
-          transition: all 0.5s linear;
-  -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
-}
-
-/*  JS as it is now adds matched attribute to card div not to card-front, so I would need to add another line of code to cardMatch() that adds matched to card-front*/
-
-.card-front:hover div{
- background: rgba(20, 19, 19, 0.5);
-}
-
-.card-front:hover div{
-  opacity: 1;
-  top: 0;
-}
-
-
-.card-front:hover img{
-  -webkit-transform: scale3d(1.2, 1.2, 1);
-          transform: scale3d(1.2, 1.2, 1);
-}
-
-
 
 
 
@@ -294,6 +252,61 @@ position: absolute;
 border-radius: 12px;
 
 }
+
+
+
+/*styling mouseover on match */
+
+
+.card-face div {
+
+display: none;
+vertical-align: bottom;
+position: relative;
+top: 20px;
+opacity: 0;
+color: #F1FAEE;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+
+}
+
+.card-face div /*when matched*/{
+
+
+    display: block;
+}
+
+.card-front img{
+  -webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+
+
+.card-front:hover div{
+ background: rgba(20, 19, 19, 0.5);
+}
+
+
+.card-front:hover div{
+  opacity: 1;
+  top: 0;
+}
+
+
+.card-front:hover img{
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+          transform: scale3d(1.2, 1.2, 1);
+}
+
+
+
+
+
 
 
 /*overlays*/
@@ -502,9 +515,11 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
 /*
   img.frame { 
     border-width: 0px;
     width: 100%; }
     }
-
+*/
+}
