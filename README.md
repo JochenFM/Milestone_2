@@ -387,6 +387,17 @@ SEO Report in Lighthouse indicated
 "Does not have a <meta name="viewport"> tag with width or initial-scaleNo `<meta name="viewport">`"
 which I then included in the <head> elements of both my HTML pages.
 
+Similarly, in response to Lighthouse's indication in the SEO report that "Document does not have a meta description" I added <meta name="Description" content=""> 
+in both prize.html and index.html providing a summary of the pages' content. 
+SEO is now at 100.
+
+
+
+I also resized all images using free and open-access [Picresize](https://picresize.com/) software in response to Lighthouse report which indicated that 
+
+
+Responded to Lighthouse Accesibility issue stating that "Heading elements are not in a sequentially-descending order" by replacing <h4> in the footer of both HTML 
+pages with a <h3> to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead. 
 
 
 

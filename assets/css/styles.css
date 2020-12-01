@@ -10,7 +10,7 @@ box-sizing: border-box;
 
 html {
     min-height: 100vh;
-    cursor: url(/assets/cursors/female_sci.cur), auto;
+    cursor: url(assets/cursors/female-icon.png), auto;
 }
 
 /* titles and game container index.html*/
@@ -144,7 +144,7 @@ transform: scale(1);
 
 .card:hover {
 
-    cursor: url(/assets/cursors/FemaleIcon.cur), auto;
+    cursor: url(/assets/cursors/female.ico), auto;
 }
 
 
