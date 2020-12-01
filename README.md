@@ -11,7 +11,7 @@ women who were trailblazers and outstanding contributors to Statistics. All of t
 than it is today. They all blazed the way despite the considerable odds against them - hence my title.
 
 It has been created for entertainment and educational purposes for all ages from 7 onwards. Using images from the public domain as card faces, the game allows players to match two 
-cards of the same character image in pairs before the timer reaches zero. 
+cards of the same character image in pairs, and eight pairs in total, before the timer reaches zero. 
 
 
 ## 2. UX ##
@@ -380,6 +380,13 @@ So all three are negative statements will have to be fulfilled and the function 
 The shuffle algorithm is based on pseudo-code...and also explained well here by Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 31:07 min) 
 although slightly different as shuffle() is wrapped inside an extra pair of parenthesis which makes it into a 
 IIFE=Immediately Invoked Function Expression which means that function will be executed right after its definition. 
+
+
+
+SEO Report in Lighthouse indicated 
+"Does not have a <meta name="viewport"> tag with width or initial-scaleNo `<meta name="viewport">`"
+which I then included in the <head> elements of both my HTML pages.
+
 
 
 
