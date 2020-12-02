@@ -409,7 +409,9 @@ pages with a <h3> to avoid anti-pattern and use a correctly sequenced heading st
 - Some images of the portrait gallery on prize.html are of different sizes.
 - Music OK?
 
-
+As the prize-html page can currently only be opened via the victory overlay on index.html, Lighthouse indicated that: 
+"There were issues affecting this run of Lighthouse: Chrome extensions negatively affected this page's load performance. 
+Try auditing the page in incognito mode or from a Chrome profile without extensions."
 
 
 
