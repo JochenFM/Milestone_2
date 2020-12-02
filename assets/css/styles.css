@@ -95,6 +95,10 @@ border: 1px solid #E63946;
 }
 
 
+.gamebuttons:hover {
+
+    cursor: url(/assets/cursors/female-icon.png), auto;
+}
 
 
 
