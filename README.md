@@ -170,11 +170,11 @@ needed to be undone after every game over or victory.
 
 * The Favicons have been created with [Favicon](https://favicon.io/).
 
-Cursor
+* Custom cursor icon is from [RealWorld Graphics](http://www.rw-designer.com/) and has been rotated by 180° with [onlinepngtools](https://onlinepngtools.com/).
 
-* ...was inspired by code from [Stackoverflow](https://stackoverflow.com/)    
+* ...was inspired by code from [Stackoverflow](https://stackoverflow.com/).    
 
-* Code for shadows behind portrait images on prize.html is taken from [Codepen](https://codepen.io/)
+* Code for shadows behind portrait images on prize.html is taken from [Codepen](https://codepen.io/).
 
 *  [GitHub](https://github.com) and [Gitpod](https://www.gitpod.io/) were used to host the software development versions and to create and save the code respectively.
 
@@ -183,7 +183,7 @@ and diagnose problems.
 
 * I used [W3C Markup Validation Service](https://validator.w3.org/) for both HTML and CSS to run my code looking for errors.
 
-* [Jshint](https://jshint.com/) to validate my JavaScript code 
+* [Jshint](https://jshint.com/) to validate my JavaScript code.
 
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) to test the performance of the website.
 
@@ -399,15 +399,12 @@ I also resized all images using free and open-access [Picresize](https://picresi
 Responded to Lighthouse Accesibility issue stating that "Heading elements are not in a sequentially-descending order" by replacing <h4> in the footer of both HTML 
 pages with a <h3> to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead. 
 
-
+added rel=noopener to meet requirements of Lighthouse cross-origin destination audit and changed all links so they have descriptive text rather than 'here'
 
 2. Persisting bugs
 
 
 - bell sound when cards matched sounds irregularly;
-- customized cursors (female scientist and female icon) do not load and cursor image does not change on hovering over areas.
-- Some images of the portrait gallery on prize.html are of different sizes.
-- Music OK?
 
 As the prize-html page can currently only be opened via the victory overlay on index.html, Lighthouse indicated that: 
 "There were issues affecting this run of Lighthouse: Chrome extensions negatively affected this page's load performance. 
