@@ -49,6 +49,7 @@ class AudioController {
 let bgMusic = new AudioController();
 
 //background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
+
 var playbtn, mutebtn;
 
 
@@ -66,47 +67,48 @@ mutebtn.style.backgroundSize = "cover";
 
 //functions
 function playPause() {
+
     if (bgMusic.bgMusic.paused) {
         bgMusic.bgMusic.play();
-        playbtn.style.background = "url(assets/images/pause_icon.png) no-repeat";
+        playbtn.style.background = "url(assets/images/pause_icon.png)";
         playbtn.style.backgroundSize = "cover";
 
 
     }
     else {
-        bgMusic.bgMusic.pause();
+       bgMusic.bgMusic.pause();
         playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
     }   playbtn.style.backgroundSize = "cover";
 
 }
 
 function mute() {
-    if (mutebtn.style.backgroundImage === 'url("assets/images/unmute_icon.png")') {
-        // Mute Music
-        bgMusic.stopMusic();
-        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat"
+  if (mutebtn.style.backgroundImage === 'url("assets/images/unmute_icon.png")') {
+        //Mute Music
+    bgMusic.stopMusic();
+      mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat"
         mutebtn.style.backgroundSize = "cover"
     } else {
         // unmute Music
-        bgMusic.startMusic();
+      bgMusic.startMusic();
         mutebtn.style.backgroundImage = "url(assets/images/unmute_icon.png)";
         mutebtn.style.backgroundSize = "cover";
     }
-    // console.log('Clicked mute btn');
-    // if (bgMusic.bgMusic.muted) {
-    //     console.log("Not muted");
-    //     console.log(bgMusic.bgMusic.muted);
-    //     bgMusic.stopMusic();
-    //     //bgMusic.bgMusic.muted = false;
-    //     mutebtn.style.background = "url(assets/images/unmute_icon.png)";
-    //     mutebtn.style.backgroundSize = "cover";
-    // } else {
-    //     console.log("muted");
-    //     bgMusic.bgMusic.muted = true;
-    //     mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
-    //     mutebtn.style.backgroundSize = "cover";
+     console.log('Clicked mute btn');
+    if (bgMusic.bgMusic.muted) {
+    console.log("Not muted");
+    console.log(bgMusic.bgMusic.muted);
+     bgMusic.stopMusic();
+    bgMusic.bgMusic.muted = false;
+     mutebtn.style.background = "url(assets/images/unmute_icon.png)";
+    mutebtn.style.backgroundSize = "cover";
+     } else {
+        console.log("muted");
+        bgMusic.bgMusic.muted = true;
+        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
+        mutebtn.style.backgroundSize = "cover";
 
-    // }
+     }
 } 
  
 class MixOrMatch{
@@ -272,7 +274,7 @@ victory() {
 function addCaption (){
 
     let imagecaption = document.getElementsByClassName('card-value').style.background="red";
-
+//for testing purposes I styled background red here
 
 document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
     //document.getElementsByClassName("caption").onmouseout = function() {mouseOut()};

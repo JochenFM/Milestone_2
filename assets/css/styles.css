@@ -95,10 +95,10 @@ border: 1px solid #E63946;
 }
 
 
-.button:hover {
+/*.button:hover {
 
     cursor: url(/assets/cursors/female-icon.png), auto;
-}
+}*/
 
 
 
@@ -127,7 +127,7 @@ border: 1px solid #E63946;
     border: solid 2px #E63946;
     border-radius: .5rem;
     outline: none;
-    background: url('assets/images/pause_icon.png') no-repeat;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Ic_pause_48px.svg') no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #F1FAEE;
@@ -148,7 +148,7 @@ transform: scale(1);
 
 .card:hover {
 
-    cursor: url(/assets/cursors/female-icon.png), auto;
+    cursor: url(/assets/cursors/female-icon-mini.png), auto;
 }
 
 
