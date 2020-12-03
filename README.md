@@ -10,8 +10,9 @@ Engineering and Mathematics (STEM) are still very much male dominated and I want
 women who were trailblazers and outstanding contributors to Statistics. All of them succeeded at a time when the profession was even more unfavourable for female - or indeed any other under-represented - voices 
 than it is today. They all blazed the way despite the considerable odds against them - hence my title.
 
-It has been created for entertainment and educational purposes for all ages from 7 onwards. Using images from the public domain as card faces, the game allows players to match two 
-cards of the same character image in pairs, and eight pairs in total, before the timer reaches zero. 
+It has been created for entertainment and educational purposes for all ages from six onwards. Using images from the public domain as card faces, the game allows players to match two 
+cards of the same character image in pairs (and eight pairs in total) before the timer reaches zero. If the user wins against the clock, s/he will be redirected (on click) to a prize page: an image gallery
+comprising portrait, name, date of birth, and brief caption with biographical information - with opportunity to click on link for further information - for each of the eight statisticians. 
 
 
 ## 2. UX ##
@@ -21,12 +22,14 @@ cards of the same character image in pairs, and eight pairs in total, before the
 The game is designed for all age groups but in terms of difficulty level targets children between 6-14 years of age primarily. 
 I expect different user groups to have the following expectations when they come to the site:
 
-- As a general user, I would like to enjoy a simple memory card game with a visually appealing format and uplifting music.
-- As a general user, I would enjoy learning something meaningful while playing a game. 
-- As a general user, I would like to play a game that does not take too long but posits a small challenge.
-- As a general user, I would like to be able to track my progress.
-- As a general user, I would like to practice my memory skills.
-- As a general user, I would like to enjoy a simple memory game that provides a 'reward' for completion and let's me learn something.
+As a general user, I would like to: 
+
+- enjoy a simple memory card game with a visually appealing format and uplifting music.
+- enjoy learning something meaningful while playing a game. 
+- play a game that does not take too long but posits a small challenge.
+- be able to track my progress.
+- practice my memory skills.
+- enjoy a simple memory game that provides a 'reward' for completion and let's me learn something.
 
 As a child (age 6-14), I would like to:
 
@@ -47,7 +50,7 @@ As a parent, I would like my child to:
 
 *Colour Palette*
 
-Color composition was inspired by this 1980 picture of Margaret Martin (left) and Helen Walker (who is included in the memory game). 
+Color composition was inspired by this 1980 picture of two statisticians - Margaret Martin (left) and Helen Walker (who is included in the memory game). 
 
 ![Color](assets/images/walker_martin.png)
 
@@ -66,9 +69,10 @@ is also reflected in the jolly background music.
 
 *Icons*
 
-For the back of the cards, I chose two icons which represent the topic as best as possible, I think: the gender symbol for female and the 'bell curve', a visualisation of the 
+For the back of the cards, I chose two icons which represent the topic as best as possible: the gender symbol for female and the 'bell curve', a visualisation of the 
 normal distribution for a variable. The term 'bell curve' originates from the fact that the graph used to depict a normal distribution consists of a symmetrical bell-shaped curve. 
 Since both icons represent the respective field this game is about - women and statistics - in a common and popular way, I felt they should go on the back of the cards.
+Cursor icon...
 
 
 *Typography*
@@ -80,14 +84,14 @@ an aceptance of error..." speaks to the topic of this game which is 'against the
 
 *Animations*
 
-I added animations on hover on the back of the cards to alert the user that these can be clicked. The change of size of the cards on click simulates the grasping of a card jusst before 
-it is flipped. The shadows on hover behind the portrait images is just a nice addition to make it a little more 3D.
+I added animations on hover on the back of the cards to alert the user that these can be clicked. The change of size of the cards on click simulates the grasping of a card just before 
+it is flipped. The shadows on hover behind the portrait images on prize.html is just a nice addition to make it a little more 3D.
 
 *Sound*
 
 I loved the idea of a game with sounds and feel the background music conveys a happy and fun atmosphere for playing the game while also pushing the user to finish in time as the beat is exactly in tune
 with the decrementing seconds. The flip sound for the cards adds a real-world experience of playing cards for the user, while the hand bells on matching is a nice addition to alert the user
-to his/her success. The victory fanfare constitutes a neat yet solemn break with the background music, while the Tom & Jerry-like game over-sound really drives the message home 
+to his/her success. The victory fanfare constitutes a neat yet solemn break with the background music, while the Tom & Jerry-like game-over sound really drives the message home 
 to the user: you are out.
 
 
@@ -105,7 +109,7 @@ I used Balsamiq to create three wireframes, for desktop, tablet, and mobile:
 
 As can be seen, the 'game over' overlay was added for the desktop view whilst the 'click to start' as well as the 'victory' and 'prize' overlays were sketched out 
 as a comment in the original Balsamiq wireframe. The prize page (prize.html) was added after I realized that a portrait gallery of all eight protagonists would be 
-more informative and appealing to the user than a 'prize' overlay with a link to just one or two statisticians as I had originally planned.
+more informative and appealing to the user than a 'prize' overlay with a link to just one or two statisticians, as I had originally planned.
 
 
 
@@ -119,7 +123,7 @@ more informative and appealing to the user than a 'prize' overlay with a link to
 - [x] **Click to Start overlay**: starts the game, timer and background music as and when the player is ready.
 - [x] **Footer**: contains basic copyright information.
 - [x] **Mute button**: allows player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
-- [x] **Pause button**: allows the player to pause/resume the game in case his/her game is interrupted by another activity which requires full attention.
+- [x] **Pause button**: allows the player to pause/resume the music in case his/her game is interrupted by another activity which requires full attention.
 - [x] **Flip counter**: counts the number of flips a user has made, allowing them to track their progress and compete for the lowest number of flips.
 - [x] **Timer**: displays the time remaining for the user to complete the game.
 - [x] **Game board**: displays the game cards face down ready to be clicked.
@@ -154,7 +158,7 @@ a link for further information about the respective person.
 - [ ] Star rating (from 1–3) that reflects the player’s performance based on number of moves made.
 - [ ] Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
 - [ ] The animated image overlay which is currently onmouseover in JS was originally planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
-with which I planned to target the overlay, but I found this too difficult to implement, especially because sixteen cards needed to be matched intp pairs and thus animated, and the imagecaption overlay
+with which I planned to target the overlay, but I found this too difficult to implement within the time at hand, especially because sixteen cards needed to be matched into pairs and thus animated, and the imagecaption overlay
 needed to be undone after every game over or victory.
 
 
@@ -172,11 +176,9 @@ needed to be undone after every game over or victory.
 
 * Custom cursor icon is from [RealWorld Graphics](http://www.rw-designer.com/) and has been rotated by 180° with [onlinepngtools](https://onlinepngtools.com/).
 
-* ...was inspired by code from [Stackoverflow](https://stackoverflow.com/).    
-
 * Code for shadows behind portrait images on prize.html is taken from [Codepen](https://codepen.io/).
 
-*  [GitHub](https://github.com) and [Gitpod](https://www.gitpod.io/) were used to host the software development versions and to create and save the code respectively.
+* [GitHub](https://github.com) and [Gitpod](https://www.gitpod.io/) were used to host the software development versions and to create and save the code respectively.
 
 * [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) built directly into the Google Chrome browser were used constantly thoughout the development cycle to test responsive design 
 and diagnose problems.
@@ -189,11 +191,7 @@ and diagnose problems.
 
 * [AmiResponsiveDesign](http://ami.responsivedesign.is) to test responsive design on various devices.
 
-* Portrait images were sourced from wikipedia.
-
-* Bell curve on back of the cards was purchased from [TheNounProject](https://thenounproject.com/).
-
-* All sounds were acquired from this [repository](http://dight310.byu.edu/media/audio/FreeLoops.com/2/) and from [freesound](https://freesound.org/home/).
+*  Mute/unmute and play/pause icons, as well as bell curve on back of the cards was purchased from [TheNounProject](https://thenounproject.com/).
 
 
 ## 5. Testing
@@ -202,7 +200,7 @@ and diagnose problems.
 
 Automated and manual testing were conducted during this project. 
 
-1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which returned "Congratulations! No Error Found"
+1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which returned "Congratulations! No Error Found" and 
  "Document checking completed. No errors or warnings to show" respectively.
 
 
@@ -272,6 +270,7 @@ Collectively, it was shown that:
 - repeated clicks on matching pairs does not effect click counter and matched cards are only counted as one match,
 - time running out before all pairs are found triggers Game Over Overlay and Game Over Sound,
 - matching pairs stay face up,
+- flipped card stays face-up and cannot be clicked again,
 - cards stay face-up long enough for user to see images,
 - flipped cards that are not a match return to default position face-down,
 - all pairs found within alotted time triggers Victory Overlay and Sound,
@@ -308,9 +307,9 @@ As a parent, I would like my child to:
 - "play a game which is safe to use in terms of content."
     - All content is safe to use and highly interesting, especially for older children and adults with an interest in science and gender.
 - "play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty."
-    - The amount of cards and the race against the cloclk add difficulty to the game, whilst training memory and visual skills.
+    - The amount of cards and the race against the clock add difficulty to the game, whilst training memory and visual skills.
 - "play a game that teaches something about the world." 
-    - Anybody who cares to read on (on prize.html) about these outstanding women will notice that they all have been mentors and inspirations to generations of statisticians - both male and emale - and are 
+    - Anybody who cares to read on (on prize.html) about these outstanding women will notice that they all have been mentors and inspirations to generations of statisticians - both male and female - and are 
     role models for us today.
 
 
@@ -396,8 +395,8 @@ SEO is now at 100.
 I also resized all images using free and open-access [Picresize](https://picresize.com/) software in response to Lighthouse report which indicated that 
 
 
-Responded to Lighthouse Accesibility issue stating that "Heading elements are not in a sequentially-descending order" by replacing <h4> in the footer of both HTML 
-pages with a <h3> to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead. 
+Responded to Lighthouse Accesibility issue stating that "Heading elements are not in a sequentially-descending order" by replacing "h4" in the footer of both HTML 
+pages with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead. 
 
 added rel=noopener to meet requirements of Lighthouse cross-origin destination audit and changed all links so they have descriptive text rather than 'here'
 
@@ -417,6 +416,8 @@ Try auditing the page in incognito mode or from a Chrome profile without extensi
 
 
 ## 6. Deployment
+
+### 6.1. GitHub Pages
 
 1. I created a Github account under [JochenFM](https://github.com/JochenFM)
 
@@ -442,6 +443,9 @@ To continue with cloning, one would then:
 See also [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more information on the process.
 
 
+### 6.2. Locally
+
+
 ## 7. Credits
 
 ### 7.1. Content
@@ -449,6 +453,13 @@ See also [here](https://docs.github.com/en/github/creating-cloning-and-archiving
 All text for this project was written by the developer.
 
 ### 7.2. Media
+
+
+* Portrait images on card faces and image gallery were sourced from wikipedia. Picture by Walker and Martin inserted here above is 
+from [AmstatNews](https://magazine.amstat.org/blog/2011/09/01/margaretmartin/), the membership magazine of the American Statistical Association.
+
+* All sounds were acquired from this [repository](http://dight310.byu.edu/media/audio/FreeLoops.com/2/) and from [freesound](https://freesound.org/home/).
+
 
 ### 7.3. Ackowledgments
 
