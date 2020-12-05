@@ -71,7 +71,7 @@ function playPause() {
     if (bgMusic.bgMusic.paused) {
         bgMusic.bgMusic.play();
         playbtn.style.background = "url(assets/images/pause_icon.png)";
-        playbtn.style.backgroundSize = "cover";
+        //playbtn.style.backgroundSize = "cover";
 
 
     }
@@ -88,6 +88,8 @@ function mute() {
     bgMusic.stopMusic();
       mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat"
         mutebtn.style.backgroundSize = "cover"
+        mutebtn.classList.add("btn", "soundOn");
+
     } else {
         // unmute Music
       bgMusic.startMusic();
@@ -173,21 +175,22 @@ hideCards() {
         }
 
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))  //if the card that I just clicked = to card to check, i.e. the src attributes, 
-            this.cardMatch(card, this.cardToCheck);                                                            //then I know we have a match
-      else 
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck)) { //if the card that I just clicked = to card to check, i.e. the src attributes, 
+            this.cardMatch(card, this.cardToCheck);
+            card.classList.add('caption');
+            this.cardToCheck.classList.add('caption');                                                            //then I know we have a match
+        } else {
             this.cardMisMatch(card, this.cardToCheck);
 
         this.cardToCheck = null; //whether match or mismatch, at that point there is no card to check
-    
+        }
     }
 
 
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);//push card into empty array
         this.matchedCards.push(card2);
-        card1.classList.add('caption');
-        card2.classList.add('caption');
+        
         this.audioController.match();
         if(this.matchedCards.length === this.cardsArray.length) //if these two have the same length I know it is victory
             this.victory(); 
