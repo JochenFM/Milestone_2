@@ -231,7 +231,81 @@ The following reports were generated: - add via uploading screenshots on igur, o
     - [Best practices & SEO]() report
 
 
+
+1. SEO Report indicated: 
+
+"Does not have a <meta name="viewport"> tag with width or initial-scale" 
+
+
+- I added that in the <head> elements.
+
+
+"Document does not have a meta description" 
+
+- I added <meta name="Description" content=""> providing a summary of the page content. 
+
+
+2. Accesibility Report stated:
+
+"Heading elements are not in a sequentially-descending order" 
+
+- I replaed "h4" in the footer with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead.
+
+"Buttons do not have an accessible name". Issue refers to button#soundToggler.btn.soundOn and button#playToggler.btn.gameOn.
+
+- I did not address this issue as it makes more sense to rectify it when I come back to the entire sound control issue at a later stage.
+
+
+
+
+
+
 *prize.html - Desktop:*
+
+
+Generally, as prize.html page can currently only be opened via the victory overlay on index.html, Lighthouse indicated that: 
+"There were issues affecting this run of Lighthouse: Chrome extensions negatively affected this page's load performance. 
+Try auditing the page in incognito mode or from a Chrome profile without extensions."
+
+
+
+
+1. Best Practice Report indicated that:
+
+"Links to cross-origin destinations are unsafe"
+
+- I added rel="noopener" to all eight links to meet requirements of cross-origin destination audit.
+
+"Image elements do not have explicit width and height
+Set an explicit width and height on image elements to reduce layout shifts and improve CLS."
+
+- I addressed this issue by manually reiszing all images using free and open-access [Picresize](https://picresize.com/) software as I have a responsive grid which would not allow 
+    specific image dimensions. But the issue was thus solved only aesthetically as images now are all same height and width.
+
+
+2. SEO Report flagged out that:
+
+"Does not have a <meta name="viewport"> tag with width or initial-scale" 
+
+- I added that in the <head> elements.
+
+"Document does not have a meta description" 
+
+- I added <meta name="Description" content=""> providing a summary of the page content. 
+
+"Links do not have descriptive text" 
+
+- I changed clickable link text from 'here' to more descriptive language for both users and search engines to  more easily understand content and how it relates to other pages. 
+
+
+
+SEO is now at 100.
+
+3. Accesibility Report stated:
+
+"Heading elements are not in a sequentially-descending order" 
+
+- I replaed "h4" in the footer with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead.
 
 
 
@@ -382,32 +456,13 @@ IIFE=Immediately Invoked Function Expression which means that function will be e
 
 
 
-SEO Report in Lighthouse indicated 
-"Does not have a <meta name="viewport"> tag with width or initial-scaleNo `<meta name="viewport">`"
-which I then included in the <head> elements of both my HTML pages.
 
-Similarly, in response to Lighthouse's indication in the SEO report that "Document does not have a meta description" I added <meta name="Description" content=""> 
-in both prize.html and index.html providing a summary of the pages' content. 
-SEO is now at 100.
-
-
-
-I also resized all images using free and open-access [Picresize](https://picresize.com/) software in response to Lighthouse report which indicated that 
-
-
-Responded to Lighthouse Accesibility issue stating that "Heading elements are not in a sequentially-descending order" by replacing "h4" in the footer of both HTML 
-pages with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead. 
-
-added rel=noopener to meet requirements of Lighthouse cross-origin destination audit and changed all links so they have descriptive text rather than 'here'
 
 2. Persisting bugs
 
 
 - bell sound when cards matched sounds irregularly;
 
-As the prize-html page can currently only be opened via the victory overlay on index.html, Lighthouse indicated that: 
-"There were issues affecting this run of Lighthouse: Chrome extensions negatively affected this page's load performance. 
-Try auditing the page in incognito mode or from a Chrome profile without extensions."
 
 
 

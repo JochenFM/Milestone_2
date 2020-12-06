@@ -36,83 +36,11 @@ class AudioController {
         this.gameOverSound.play();   
     }
 
-    pauseMusic() {
-        audioController.pause();
-    }
-
-    muteMusic() {
-        audioController.mute();
-    }
 }
 
 
 
-let audioController = new AudioController();
 
-//background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
-
-var playbtn, mutebtn;
-
-
-//set object references
-playbtn = document.getElementById('playToggler');
-mutebtn = document.getElementById('soundToggler');
-
-//add event handling
-playbtn.addEventListener('click', playPause);
-mutebtn.addEventListener('click', mute);
-
-//set intial button background
-//mutebtn.style.background = "url(assets/images/unmute_icon.png)";
-mutebtn.style.backgroundSize = "cover";
-
-//functions
-function playPause() {
-
-    if (audioController.audioController.paused) {
-        audioController.audioController.play();
-        //playbtn.style.background = "url(assets/images/pause_icon.png)";
-        //playbtn.style.backgroundSize = "cover";
-
-
-    }
-    else {
-       audioController.audioController.pause();
-        playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
-    }   playbtn.style.backgroundSize = "cover";
-
-}
-
-function mute() {
-  if (mutebtn.style.backgroundImage === 'url("assets/images/unmute_icon.png")') {
-        //Mute Music
-    bgMusic.stopMusic();
-      mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat"
-        mutebtn.style.backgroundSize = "cover"
-        mutebtn.classList.add("btn", "soundOn");
-
-    } else {
-        // unmute Music
-      audioController.startMusic();
-        mutebtn.style.backgroundImage = "url(assets/images/unmute_icon.png)";
-        mutebtn.style.backgroundSize = "cover";
-    }
-     console.log('Clicked mute btn');
-    if (audioController.audioController.muted) {
-    console.log("Not muted");
-    console.log(audioController.audioController.muted);
-     bgMusic.stopMusic();
-    audioController.audioController.muted = false;
-     mutebtn.style.background = "url(assets/images/unmute_icon.png)";
-    mutebtn.style.backgroundSize = "cover";
-     } else {
-        console.log("muted");
-        audioController.audioController.muted = true;
-        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
-        mutebtn.style.backgroundSize = "cover";
-
-     }
-} 
  
 class MixOrMatch{
     constructor(totalTime, cards){
@@ -123,7 +51,7 @@ class MixOrMatch{
     this.ticker = document.getElementById('flips');
     this.audioController = new AudioController();
     
-
+    
 }
 
 
@@ -154,7 +82,6 @@ hideCards() {
 
     this.cardsArray.forEach(card =>{
         card.classList.remove('visible');
-        card.classList.remove('caption'); //unclear whether I need this as I do not have a matched class in HTML
     });
 }
    
@@ -176,22 +103,19 @@ hideCards() {
         }
 
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck)) { //if the card that I just clicked = to card to check, i.e. the src attributes, 
-            this.cardMatch(card, this.cardToCheck);
-            //card.classList.add('caption');
-            //this.cardToCheck.classList.add('caption');                                                            //then I know we have a match
-        } else {
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck)) //if the card that I just clicked = to card to check, i.e. the src attributes, 
+            this.cardMatch(card, this.cardToCheck);                                                        //then I know we have a match
+        else 
             this.cardMisMatch(card, this.cardToCheck);
 
         this.cardToCheck = null; //whether match or mismatch, at that point there is no card to check
-        }
+        
     }
 
 
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);//push card into empty array
         this.matchedCards.push(card2);
-        
         this.audioController.match();
         if(this.matchedCards.length === this.cardsArray.length) //if these two have the same length I know it is victory
             this.victory(); 
@@ -207,8 +131,6 @@ hideCards() {
         setTimeout(() => {
             card1.classList.remove('visible');
             card2.classList.remove('visible');
-            card1.classList.remove('caption');
-            card2.classList.remove('caption');
             this.busy=false;
         }, 1000);
     }
@@ -273,26 +195,6 @@ victory() {
 
     }
 }
-
-
-//function addCaption (){
-
-    //let imagecaption = document.getElementsByClassName('card-value').style.background="red";
-//for testing purposes I styled background red here
-
-//document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
-    //document.getElementsByClassName("caption").onmouseout = function() {mouseOut()};
-
-
-//}
-
-//function mouseOver() {
-  //document.getElementsByClassName("caption").style.backgroundImage = "red";
-//}
-
-//function mouseOut() {
-  //document.getElementById("caption").style.backgroundImage = "black";
-//}
 
 
 
