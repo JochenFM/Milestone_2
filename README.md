@@ -465,6 +465,7 @@ https://github.com/JochenFM/Milestone_2.git
 
 7. Press Enter. You local clone will be created.
 
+
 Alternatively, you can download the **ZIP folder** of this project by clicking the **Code** button and selecting **Download ZIP**.
 
 It can then be unpacked into your desired location.
@@ -485,7 +486,7 @@ All text for this project was written by the developer.
 
 
 * Portrait images on card faces and image gallery were sourced from wikipedia. Picture by Walker and Martin inserted here above is 
-from [AmstatNews](https://magazine.amstat.org/blog/2011/09/01/margaretmartin/), the membership magazine of the American Statistical Association.
+from this [2011 issue of AmstatNews](https://magazine.amstat.org/blog/2011/09/01/margaretmartin/), the membership magazine of the American Statistical Association.
 
 * All sounds were acquired from this [repository](http://dight310.byu.edu/media/audio/FreeLoops.com/2/) and from [freesound](https://freesound.org/home/).
 

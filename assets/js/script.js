@@ -63,7 +63,7 @@ playbtn.addEventListener('click', playPause);
 mutebtn.addEventListener('click', mute);
 
 //set intial button background
-mutebtn.style.background = "url(assets/images/unmute_icon.png)";
+//mutebtn.style.background = "url(assets/images/unmute_icon.png)";
 mutebtn.style.backgroundSize = "cover";
 
 //functions
@@ -71,7 +71,7 @@ function playPause() {
 
     if (audioController.audioController.paused) {
         audioController.audioController.play();
-        playbtn.style.background = "url(assets/images/pause_icon.png)";
+        //playbtn.style.background = "url(assets/images/pause_icon.png)";
         //playbtn.style.backgroundSize = "cover";
 
 
@@ -275,16 +275,16 @@ victory() {
 }
 
 
-function addCaption (){
+//function addCaption (){
 
-    let imagecaption = document.getElementsByClassName('card-value').style.background="red";
+    //let imagecaption = document.getElementsByClassName('card-value').style.background="red";
 //for testing purposes I styled background red here
 
-document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
+//document.getElementsByClassName('caption').onmouseover = function() {mouseOver()};
     //document.getElementsByClassName("caption").onmouseout = function() {mouseOut()};
 
 
-}
+//}
 
 //function mouseOver() {
   //document.getElementsByClassName("caption").style.backgroundImage = "red";
