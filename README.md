@@ -174,7 +174,7 @@ needed to be undone after every game over or victory.
 
 * The Favicons have been created with [Favicon](https://favicon.io/).
 
-* Custom cursor icon is from [RealWorld Graphics](http://www.rw-designer.com/) and has been rotated by 180° with [onlinepngtools](https://onlinepngtools.com/).
+* Custom cursor icon is from [RealWorld Graphics](http://www.rw-designer.com/).
 
 * Code for shadows behind portrait images on prize.html is taken from [Codepen](https://codepen.io/).
 
@@ -333,7 +333,8 @@ In MS Explorer, game would not even start and all cards were aligned in one sing
 
 In the coding process, I encountered a number of minor bugs such as absent 
 or inconsistent camelCases, or capital letters at the beginning of a variable. I also had commented out vital functions for testing reasons, such as game.StartGame(), 
-and forgot to uncomment them until I noticed.  
+and forgot to uncomment them until I noticed. 
+
 Also, when coding the play/pause and un/mute functions, I initially did not insert the corresponding methods in my  
 muteMusic() {
         bgMusic.mute();
@@ -351,28 +352,27 @@ Always use the "new" keyword whenever you want to use a method within a class
 
 Here are some of the more substantial bugs I encountered and my approach to fix them:
 
-
-
-- 
+ 
+- used getElementsByClassName without supplying index until I noticed and added [0] to the end of className. I must be [0] as it is a zero-index starting with 0, 
+targeting only 1 card:  
 
 getCardType(card) {
-        return card.getElementsByClassName('card-value')[0].src; //gets the card in HTML by the class indicated, as it is only one, it is 0 (=zero-index), 
-                                                                //and then the source attribute
+        return card.getElementsByClassName('card-value')[0].src;
 
 
-
-added startGame function, added empty matchedCards array and three options when user is not allowed to flip another card which is a Boolean, 
-but spelled outin super complicated, negative way, and added flipCard function but nothing work
-- canFlipCard(card) {
+- define cases when user is not allowed to flip a second card which amounted a Boolean, spelled out in complicated, negative way for which I took inspiration from  
+[PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=1259s) min 21:00 following:
+canFlipCard(card) {
         return true;
         //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
 
-This function is meant to check the conditions under which cards must not be flipped, and there are three of them. The first is that card must not be flipped if this.busy which might represent
-an animation or anything like that and user is not allowed to click on anything until this is finished. The second is an unallowed click on cards that are already matched and lay face-up and
-a further click would run the flipCard function. The third case is an unallowed click on a card that is already flipped waiting face up to be matched.
-Solution was taken from [PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=1259s) min 21:00
+This function is meant to check the conditions under which cards must not be flipped, and there are three of them. The first is that card must not be 
+flipped if this.busy which might represent an animation or anything like that and user is not allowed to click on anything until this is finished. 
+The second is an unallowed click on cards that are already matched and lay face-up and a further click would run the flipCard function. 
+The third case is an unallowed click on a card that is already flipped waiting face up to be matched.
 
-So all three are negative statements will have to be fulfilled and the function returns 'true'.
+So if all three statements are false the function returns 'true' and user can flip cards. Or, vice versa, if any of these statements are true, the function will return false and cards 
+cannot be flipped.
 
 
 
@@ -445,6 +445,35 @@ See also [here](https://docs.github.com/en/github/creating-cloning-and-archiving
 
 ### 6.2. Locally
 
+To run this project locally, proceed as follows:
+
+To clone this project from GitHub:
+
+1. click the link to the [Against the Odds repository](https://github.com/JochenFM/Milestone_2);
+
+2. in the menu, click **Code** button;
+
+3. in the pop up window, choose **HTTPS** and copy the clone URL for the repository;
+
+4. in your local IDE open **Git Bash**;
+
+5. Change the current working directory to the location where you want the cloned directory to be made;
+
+6. Type git clone and then past the URL you copied in step 3;
+
+https://github.com/JochenFM/Milestone_2.git
+
+7. Press Enter. You local clone will be created.
+
+Alternatively, you can download the **ZIP folder** of this project by clicking the **Code** button and selecting **Download ZIP**.
+
+It can then be unpacked into your desired location.
+
+Open the **index.html** file to run the project locally.
+
+
+Check out [further information](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) on cloning a repository from GitHub.
+
 
 ## 7. Credits
 
@@ -480,7 +509,8 @@ The idea for active card on click is from Marina [Ferreira](https://www.youtube.
 
 Animated image overlay on matched cards was inspired by [cssscript](https://www.cssscript.com/animated-image-hover-overlay-with-image-scale/) and edited to suit my needs. 
 
-Thanks also to tutors Samantha Dartnell, Johann Alberts, and Michael Park for going with me through the play/pause and un/mute functions and buttons, and to my fellow students on Slack,
+Thanks also to tutors Samantha Dartnell and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, and to Johann Alberts
+for giving me the right clues for solving CSS issues with cursor and portrait galery in prize.html. Thanks also to my fellow students on Slack,
 especially those who also coded memory games in the past.
 
 A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.

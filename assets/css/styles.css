@@ -262,7 +262,7 @@ border-radius: 12px;
 /*styling mouseover on match */
 
 
-.card-face div {
+.visible.caption {
 
 display: none;
 vertical-align: bottom;
@@ -277,7 +277,6 @@ text-align: center;
 }
 
 .card-face div /*when matched*/{
-
 
     display: block;
 }

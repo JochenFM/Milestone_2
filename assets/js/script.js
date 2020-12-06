@@ -37,16 +37,17 @@ class AudioController {
     }
 
     pauseMusic() {
-        bgMusic.pause();
+        audioController.pause();
     }
 
     muteMusic() {
-        bgMusic.mute();
+        audioController.mute();
     }
 }
 
 
-let bgMusic = new AudioController();
+
+let audioController = new AudioController();
 
 //background music sound and play toggler go here. inspiration from https://www.youtube.com/watch?v=hsSXzdn_0Gg:
 
@@ -68,15 +69,15 @@ mutebtn.style.backgroundSize = "cover";
 //functions
 function playPause() {
 
-    if (bgMusic.bgMusic.paused) {
-        bgMusic.bgMusic.play();
+    if (audioController.audioController.paused) {
+        audioController.audioController.play();
         playbtn.style.background = "url(assets/images/pause_icon.png)";
         //playbtn.style.backgroundSize = "cover";
 
 
     }
     else {
-       bgMusic.bgMusic.pause();
+       audioController.audioController.pause();
         playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
     }   playbtn.style.backgroundSize = "cover";
 
@@ -92,21 +93,21 @@ function mute() {
 
     } else {
         // unmute Music
-      bgMusic.startMusic();
+      audioController.startMusic();
         mutebtn.style.backgroundImage = "url(assets/images/unmute_icon.png)";
         mutebtn.style.backgroundSize = "cover";
     }
      console.log('Clicked mute btn');
-    if (bgMusic.bgMusic.muted) {
+    if (audioController.audioController.muted) {
     console.log("Not muted");
-    console.log(bgMusic.bgMusic.muted);
+    console.log(audioController.audioController.muted);
      bgMusic.stopMusic();
-    bgMusic.bgMusic.muted = false;
+    audioController.audioController.muted = false;
      mutebtn.style.background = "url(assets/images/unmute_icon.png)";
     mutebtn.style.backgroundSize = "cover";
      } else {
         console.log("muted");
-        bgMusic.bgMusic.muted = true;
+        audioController.audioController.muted = true;
         mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat";  
         mutebtn.style.backgroundSize = "cover";
 
@@ -177,8 +178,8 @@ hideCards() {
     checkForCardMatch(card) {
         if(this.getCardType(card) === this.getCardType(this.cardToCheck)) { //if the card that I just clicked = to card to check, i.e. the src attributes, 
             this.cardMatch(card, this.cardToCheck);
-            card.classList.add('caption');
-            this.cardToCheck.classList.add('caption');                                                            //then I know we have a match
+            //card.classList.add('caption');
+            //this.cardToCheck.classList.add('caption');                                                            //then I know we have a match
         } else {
             this.cardMisMatch(card, this.cardToCheck);
 
