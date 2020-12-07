@@ -206,10 +206,36 @@ Automated and manual testing were conducted during this project.
 
 2. I used [AmiResponsiveDesign](.http://ami.responsivedesign.is) to create the following test result: 
 
-- insert PNG
+
+_index.html_
 
 
-As can be seen, all pages, links, icons performed as expected on all devices (with the exception of the hero image on the iPhone)
+![index](assets/images/media.responsiveness-index.png)
+
+
+As can be seen, all pages, overlays, and icons performed as expected on all devices (with the exception of the start overlay on mobile phone).
+
+
+That the application is responsive in mobile phone size can be seen here :![here](assets/images/media.responsiveness-mobile.png)
+
+
+_prize.html_
+
+This page cannot be accessed via URL but the following screenshots prove media responsivness:
+
+At 1000px width:
+
+![1000](assets/images/media.responsiveness-prize1000.png)
+
+
+At ipad size:
+
+![ipad](assets/images/media.responsiveness-prizeipad.png)
+
+
+At mobile phone size:
+
+![mobile](assets/images/media.responsiveness-prizem.png)
 
 
 3. JShint
