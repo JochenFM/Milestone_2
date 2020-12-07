@@ -221,7 +221,7 @@ That the application is responsive in mobile phone size can be seen here :![here
 
 _prize.html_
 
-This page cannot be accessed via URL but the following screenshots prove media responsivness:
+This page cannot be accessed via URL so testing via software is not possible, but the following screenshots prove media responsivness:
 
 At 1000px width:
 
@@ -238,10 +238,15 @@ At mobile phone size:
 ![mobile](assets/images/media.responsiveness-prizem.png)
 
 
-3. JShint
+3. JShint was used to validate JS
+
+- no major errors found, as can be seen from result:
+
+![jshint](assets/images/jshint-result.png)
 
 
-- insert metrics here as screenshot
+
+
 
 Lighthouse was used to test the performance of the application on both pages (index.html and prize.html) on mobile and desktop.
 
