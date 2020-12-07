@@ -122,8 +122,6 @@ more informative and appealing to the user than a 'prize' overlay with a link to
 - [x] **Game titles**: identify the topic and the type of game with brief game instructions.
 - [x] **Click to Start overlay**: starts the game, timer and background music as and when the player is ready.
 - [x] **Footer**: contains basic copyright information.
-- [x] **Mute button**: allows player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
-- [x] **Pause button**: allows the player to pause/resume the music in case his/her game is interrupted by another activity which requires full attention.
 - [x] **Flip counter**: counts the number of flips a user has made, allowing them to track their progress and compete for the lowest number of flips.
 - [x] **Timer**: displays the time remaining for the user to complete the game.
 - [x] **Game board**: displays the game cards face down ready to be clicked.
@@ -160,9 +158,8 @@ a link for further information about the respective person.
 - [ ] The animated image overlay which is currently onmouseover in JS was originally planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
 with which I planned to target the overlay, but I found this too difficult to implement within the time at hand, especially because sixteen cards needed to be matched into pairs and thus animated, and the imagecaption overlay
 needed to be undone after every game over or victory.
-
-
-
+- [ ] Make mute button functional via JS which will allow player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
+- [ ] Make pause button functional for the player to pause/resume the music in case his/her game is interrupted by another activity which requires full attention. 
 
 ## 4. Technologies Used
 
@@ -193,6 +190,8 @@ and diagnose problems.
 
 *  Mute/unmute and play/pause icons, as well as bell curve on back of the cards was purchased from [TheNounProject](https://thenounproject.com/).
 
+* [Imgur](https://imgur.com/) to store external images for README.md
+
 
 ## 5. Testing
 
@@ -200,44 +199,33 @@ and diagnose problems.
 
 Automated and manual testing were conducted during this project. 
 
-1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which 
+1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which respectively
 returned:
 
 ![css](assets/images/css-validation.png)
 
 
-2. I used [AmiResponsiveDesign](.http://ami.responsivedesign.is) to create the following test result: 
 
+and "Document checking completed. No errors or warnings to show" for both html pages.
 
-_index.html_
-
-
-![index](assets/images/media.responsiveness-index.png)
+2. I used [AmiResponsiveDesign](.http://ami.responsivedesign.is) to create this [test result](https://imgur.com/kCF7iEN) for index.html.
 
 
 As can be seen, all pages, overlays, and icons performed as expected on all devices (with the exception of the start overlay on mobile phone).
 
 
-That the application is responsive in mobile phone size can be seen here :![here](assets/images/media.responsiveness-mobile.png)
+The application is also responsive in [mobile phone size](https://imgur.com/fw7nDzT).
 
 
 _prize.html_
 
 This page cannot be accessed via URL so testing via software is not possible, but the following screenshots prove media responsivness:
 
-At 1000px width:
+At [1000px width](https://imgur.com/RVljmAJ)
 
-![1000](assets/images/media.responsiveness-prize1000.png)
+At [ipad size](https://imgur.com/lZQMfY8)
 
-
-At ipad size:
-
-![ipad](assets/images/media.responsiveness-prizeipad.png)
-
-
-At mobile phone size:
-
-![mobile](assets/images/media.responsiveness-prizem.png)
+At [mobile phone size](https://imgur.com/hGCjWeX)
 
 
 3. JShint was used to validate JS
@@ -293,8 +281,7 @@ The following reports were generated:
 - I moved the _meta charset="UTF-8"_ element right after the _head_ element.
 
 
-
-Lighthouse report is now as follows: ![follows](assets/images/lighthouse-indexHTML.png) 
+Lighthouse report is now as [follows](https://imgur.com/UMq6nNz) 
 
 
 
@@ -350,16 +337,7 @@ Set an explicit width and height on image elements to reduce layout shifts and i
 
 - I replaed "h4" in the footer with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead.
 
-
-
-Lighthouse report is now as follows: ![follows](assets/images/lighthouse-prizeHTML.png) 
-
-
-
-
-
-
-
+Lighthouse report is now as [follows](https://imgur.com/eZfwbgh) 
 
 A few opportunities to improve Performance and Best Practices of both pages remain 
 and will be addressed at a later stage:
@@ -422,11 +400,17 @@ Now we can come back to some of the user stories mentioned above (2.1) to see ho
 - "As a general user, I would enjoy learning something meaningful while playing a game." 
     - The game contains images of hitherto under-represented female statisticians who had a significant impact on the field of statistics and beyond.
 - "As a general user, I would like to be able to track my progress."
-    - The timer and flip counter allow users to track their progress throughout the game.
+    - The timer and flip counter allow users to track their progress throughout the game, as can be seen [here](https://imgur.com/YgwUZ2Q)
+
+
+
 - "As a general user, I would like to practice my memory skills."
     - Playing a card matching game can help improve memory skills.
 - "As a general user, I would like to enjoy a simple memory game that provides a 'reward' for completion and let's me learn something."
-    - The game does not just end on 'Victory' but provides a prize site with useful further information on the topic for anybody who would like to know more.
+    - The game does not just end on 'Victory' but provides a prize site with useful further information on the topic for anybody who would like to know more, as can be seen 
+    [here](https://imgur.com/UE6ABMj) and below
+
+
 
 As a child (age 6-14), I would like to:
 
@@ -444,7 +428,7 @@ As a parent, I would like my child to:
 - "play a game that is sufficiently challenging without causing frustration due to too great a level of difficulty."
     - The amount of cards and the race against the clock add difficulty to the game, whilst training memory and visual skills.
 - "play a game that teaches something about the world." 
-    - Anybody who cares to read on (on prize.html) about these outstanding women will notice that they all have been mentors and inspirations to generations of statisticians - both male and female - and are 
+    - Anybody who cares to read on (on [prize.html](https://imgur.com/S2FCUCd)) about these outstanding women will notice that they all have been mentors and inspirations to generations of statisticians - both male and female - and are 
     role models for us today.
 
 
@@ -626,7 +610,7 @@ The idea for active card on click is from Marina [Ferreira](https://www.youtube.
 
 Animated image overlay on matched cards was inspired by [cssscript](https://www.cssscript.com/animated-image-hover-overlay-with-image-scale/) and edited to suit my needs. 
 
-Thanks also to tutors Samantha Dartnell and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, and to Johann Alberts
+Thanks also to tutors Samantha Dartnell, Alan McGee, and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, and to Johann Alberts
 for giving me the right clues for solving CSS issues with cursor and portrait gallery in prize.html. Thanks also to my fellow students on Slack,
 especially those who also coded memory games in the past.
 

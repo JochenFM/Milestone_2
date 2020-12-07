@@ -1,10 +1,10 @@
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('Milestone_2/assets/sounds/bgMusic.wav');
-        this.flipSound = new Audio('Milestone_2/assets/sounds/card-flip.wav');
-        this.matchSound = new Audio('Milestone_2/assets/sounds/matching-hand-bells.wav');
-        this.victorySound = new Audio('Milestone_2/assets/sounds/victory-fanfare.wav');
-        this.gameOverSound = new Audio('Milestone_2/assets/sounds/game-over.wav');
+        this.bgMusic = new Audio('/assets/sounds/bgMusic.wav');
+        this.flipSound = new Audio('/assets/sounds/card-flip.wav');
+        this.matchSound = new Audio('/assets/sounds/matching-hand-bells.wav');
+        this.victorySound = new Audio('/assets/sounds/victory-fanfare.wav');
+        this.gameOverSound = new Audio('/assets/sounds/game-over.wav');
         this.bgMusic.loop = true;  
         this.bgMusic.volume = 0.5;  
     }
