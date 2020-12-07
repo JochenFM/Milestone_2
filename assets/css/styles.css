@@ -104,7 +104,7 @@ border: 1px solid #E63946;
 
 
 
-#soundToggler {
+#soundbtn {
 
     height: 3rem;
     width: 3rem;
@@ -120,7 +120,7 @@ border: 1px solid #E63946;
 
 
 
-#playToggler {
+#playbtn {
 
     height: 3rem;
     width: 3rem;
@@ -257,54 +257,6 @@ border-radius: 12px;
 
 }
 
-
-
-/*styling mouseover on match */
-
-
-.visible.caption {
-
-display: none;
-vertical-align: bottom;
-position: relative;
-top: 20px;
-opacity: 0;
-color: #F1FAEE;
-font-weight: bold;
-text-transform: uppercase;
-text-align: center;
-
-}
-
-.card-face div /*when matched*/{
-
-    display: block;
-}
-
-.card-front img{
-  -webkit-transition: all 0.5s linear;
-          transition: all 0.5s linear;
-  -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
-}
-
-
-
-.card-front:hover div{
- background: rgba(20, 19, 19, 0.5);
-}
-
-
-.card-front:hover div{
-  opacity: 1;
-  top: 0;
-}
-
-
-.card-front:hover img{
-  -webkit-transform: scale3d(1.2, 1.2, 1);
-          transform: scale3d(1.2, 1.2, 1);
-}
 
 
 

@@ -219,44 +219,49 @@ As can be seen, all pages, links, icons performed as expected on all devices (wi
 
 Lighthouse was used to test the performance of the application on both pages (index.html and prize.html) on mobile and desktop.
 
-The following reports were generated: - add via uploading screenshots on igur, or by adding them to the files
+The following reports were generated:
 
 
 *index.html - Desktop:*
 
-- Please click the links below to view the reports:
-
-    - [Performance]() report
-    - [Accessibility]() report
-    - [Best practices & SEO]() report
-
-
 
 1. SEO Report indicated: 
 
-"Does not have a <meta name="viewport"> tag with width or initial-scale" 
+"Does not have a _meta name="viewport"_ tag with width or initial-scale" 
 
 
-- I added that in the <head> elements.
+- I added that in the _head_ elements.
 
 
 "Document does not have a meta description" 
 
-- I added <meta name="Description" content=""> providing a summary of the page content. 
+- I added _meta name="Description" content=""_ providing a summary of the page content. 
 
 
-2. Accesibility Report stated:
+2. Accessibility Report stated:
 
 "Heading elements are not in a sequentially-descending order" 
 
-- I replaed "h4" in the footer with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead.
+- I replaced "h4" in the footer with a "h3" to avoid anti-pattern and use a correctly sequenced heading structure from h1-h3 instead.
 
 "Buttons do not have an accessible name". Issue refers to button#soundToggler.btn.soundOn and button#playToggler.btn.gameOn.
 
-- I did not address this issue as it makes more sense to rectify it when I come back to the entire sound control issue at a later stage.
+- I tried to address this issue by changing the id to soundbtn and playbtn but issue persists. I will rectify it when I come back to the entire sound control issue at a later stage.
+
+
+3. Best Practices Report said:
+
+"Displays images with incorrect aspect ratio" which concerns some of the portrait images and especially the female icons on back of cards. 
+- I lost points here and will probably have to insert an image CDN at a later stage to rectify.
+
+
+"Charset declaration is missing or occurs too late in the HTML"
+
+- I moved the _meta charset="UTF-8"_ element right after the _head_ element.
 
 
 
+Lighthouse report is now as follows: ![follows](assets/images/lighthouse-indexHTML.png) 
 
 
 
@@ -276,30 +281,35 @@ Try auditing the page in incognito mode or from a Chrome profile without extensi
 
 - I added rel="noopener" to all eight links to meet requirements of cross-origin destination audit.
 
+"Charset declaration is missing or occurs too late in the HTML"
+
+- I moved the _meta charset="UTF-8"_ element right after the _head_ element.
+
+
+2. Performance Report said that:
+
 "Image elements do not have explicit width and height
 Set an explicit width and height on image elements to reduce layout shifts and improve CLS."
 
 - I addressed this issue by manually reiszing all images using free and open-access [Picresize](https://picresize.com/) software as I have a responsive grid which would not allow 
-    specific image dimensions. But the issue was thus solved only aesthetically as images now are all same height and width.
+    specific image dimensions. But the issue persisted and I lost points here as even although images now are all same height and width, this was not achieved via 
+    setting an explicit height and width on image elements in CSS.  
 
 
 2. SEO Report flagged out that:
 
-"Does not have a <meta name="viewport"> tag with width or initial-scale" 
+"Does not have a _meta name="viewport"_ tag with width or initial-scale" 
 
-- I added that in the <head> elements.
+- I added that in the _head_ elements.
 
 "Document does not have a meta description" 
 
-- I added <meta name="Description" content=""> providing a summary of the page content. 
+- I added _meta name="Description" content=""_ providing a summary of the page content. 
 
 "Links do not have descriptive text" 
 
-- I changed clickable link text from 'here' to more descriptive language for both users and search engines to  more easily understand content and how it relates to other pages. 
+- I changed clickable link text from 'here' to more descriptive language for both users and search engines to more easily understand content and how it relates to other pages. 
 
-
-
-SEO is now at 100.
 
 3. Accesibility Report stated:
 
@@ -309,12 +319,30 @@ SEO is now at 100.
 
 
 
-*index.html - Mobile:*    
-
-*prize.html - Mobile:*
+Lighthouse report is now as follows: ![follows](assets/images/lighthouse-prizeHTML.png) 
 
 
 
+
+
+
+
+
+A few opportunities to improve Performance and Best Practices of both pages remain 
+and will be addressed at a later stage:
+
+
+* Performance of both pages:  
+
+"Eliminate render-blocking resources"
+
+"Serve images in next-gen formats"
+
+"Image elements do not have explicit width and height"
+
+* Best Practices in both pages:
+
+"Browser errors were logged to the console" which concerns an issue with _link rel="manifest" href="/site.webmanifest"_ which I was unable to resolve.
 
 
 
@@ -337,7 +365,7 @@ Here are some of the
 I played the game repeatedly to test functionality and invited the entire family and some of my friends to play and test. The game has thus been played by user aged between 6 and 64.
 Collectively, it was shown that:
 
-- game is winable within the alotted time for young and old, 
+- game is winnable within the allotted time for young and old, 
 - timer and background music starts when Click to Start overlay is clicked,
 - matched pairs are disabled and cannt be clicked again,
 - if pairs are matched, bell sound is triggered (although intermittently only),
@@ -347,7 +375,7 @@ Collectively, it was shown that:
 - flipped card stays face-up and cannot be clicked again,
 - cards stay face-up long enough for user to see images,
 - flipped cards that are not a match return to default position face-down,
-- all pairs found within alotted time triggers Victory Overlay and Sound,
+- all pairs found within allotted time triggers Victory Overlay and Sound,
 - timer stops when game is won,
 - user can proceed via Victory overlay to prize.html,
 - from prize.html user can click back to restart the game.
@@ -398,7 +426,7 @@ In Safari and Firefox, the time ran twice as fast taking away two digits every s
 Additionally, in Safari, all cards were shown card face up (visible) by default, and in MS Edge the game would start with the wrong overlay visible. 
 Music would not start playing in neither of them.
 
-All of these issues except the music issue, were resolved by moving the <script src="assets/js/script.js" async></script>
+All of these issues except the music issue, were resolved by moving the _script src="assets/js/script.js" async></script_
 from the header of the HTML pages to below the footer inside the body tag.
 
 In MS Explorer, game would not even start and all cards were aligned in one single row.
@@ -566,7 +594,7 @@ The idea for active card on click is from Marina [Ferreira](https://www.youtube.
 Animated image overlay on matched cards was inspired by [cssscript](https://www.cssscript.com/animated-image-hover-overlay-with-image-scale/) and edited to suit my needs. 
 
 Thanks also to tutors Samantha Dartnell and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, and to Johann Alberts
-for giving me the right clues for solving CSS issues with cursor and portrait galery in prize.html. Thanks also to my fellow students on Slack,
+for giving me the right clues for solving CSS issues with cursor and portrait gallery in prize.html. Thanks also to my fellow students on Slack,
 especially those who also coded memory games in the past.
 
 A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
