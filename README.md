@@ -200,8 +200,10 @@ and diagnose problems.
 
 Automated and manual testing were conducted during this project. 
 
-1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which returned "Congratulations! No Error Found" and 
- "Document checking completed. No errors or warnings to show" respectively.
+1. I used the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and the [W3C HTML Validator](https://validator.w3.org/) which 
+returned:
+
+![css](assets/images/css-validation.png)
 
 
 2. I used [AmiResponsiveDesign](.http://ami.responsivedesign.is) to create the following test result: 
