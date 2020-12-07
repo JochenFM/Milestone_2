@@ -1,10 +1,10 @@
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('/assets/sounds/bgMusic.wav');
-        this.flipSound = new Audio('/assets/sounds/card-flip.wav');
-        this.matchSound = new Audio('/assets/sounds/matching-hand-bells.wav');
-        this.victorySound = new Audio('/assets/sounds/victory-fanfare.wav');
-        this.gameOverSound = new Audio('/assets/sounds/game-over.wav');
+        this.bgMusic = new Audio('assets/sounds/bgMusic.wav');
+        this.flipSound = new Audio('assets/sounds/card-flip.wav');
+        this.matchSound = new Audio('assets/sounds/matching-hand-bells.wav');
+        this.victorySound = new Audio('assets/sounds/victory-fanfare.wav');
+        this.gameOverSound = new Audio('assets/sounds/game-over.wav');
         this.bgMusic.loop = true;  
         this.bgMusic.volume = 0.5;  
     }
@@ -94,13 +94,15 @@ hideCards() {
             
             //are we flipping a card for the first time or trying and match a card?
 
-            if(this.cardToCheck)
+            if(this.cardToCheck) {
                 this.checkForCardMatch(card);//if card to check is not no then whichever card I just flipped = card to check
-           else 
+         } else {
                this.cardToCheck = card; 
 
             }
-        }
+         }
+
+        }    
 
     checkForCardMatch(card) {
         if(this.getCardType(card) === this.getCardType(this.cardToCheck)) //if the card that I just clicked = to card to check, i.e. the src attributes, 
@@ -196,18 +198,13 @@ victory() {
     }
 }
 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+} else {
+    ready();
+}
 
 
-
-function pageRedirect() {
-      window.location.href = "prize.html";
-
-    }
-
-function clickedButton(){
-        window.location.href="index.html";
-
-    }
 
 function ready() {
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
@@ -233,9 +230,12 @@ function ready() {
     });
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ready);
-} else {
-    ready();
-}
+function pageRedirect() {
+      window.location.href = "prize.html";
 
+    }
+
+function clickedButton(){
+        window.location.href="index.html";
+
+    }
