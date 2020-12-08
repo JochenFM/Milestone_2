@@ -441,20 +441,15 @@ All of these issues except the music issue, were resolved by moving the _script 
 from the header of the HTML pages to below the footer inside the body tag.
 
 
-
 In the coding process, I encountered a number of minor bugs such as absent 
-or inconsistent camelCases, or capital letters at the beginning of a variable. I also had commented out vital functions for testing reasons, such as game.StartGame(), 
-and forgot to uncomment them until I noticed. 
+or inconsistent camelCases, or capital letters at the beginning of a variable. 
 
-Also, when coding the play/pause and un/mute functions, I initially did not insert the corresponding methods in my  
-muteMusic() {
-        bgMusic.mute();
-pauseMusic() {
-        bgMusic.pause();
-    }
+As my .wav files threw 404 errors in the console, it was also important to learn that JS file paths, other than those in CSS, work better without '/' at the beginning, as JS 
+files "think" it's already in the main root-level, so one just targets direct source.
+In CSS, '../' seems least error-prone.
 
-in my AudioController class to the effect that 
 
+Also, when coding the play/pause and un/mute functions, I initially did not insert the corresponding methods in my AudioController class to the effect that they were not called.
 
 
 
@@ -468,35 +463,13 @@ getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
 
 
-- define cases when user is not allowed to flip a second card which amounted a Boolean, spelled out in complicated, negative way for which I took inspiration from  
-[PortEXE](https://www.youtube.com/watch?v=3uuQ3g92oPQ&t=1259s) min 21:00 following:
-canFlipCard(card) {
-        return true;
-        //return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
-
-This function is meant to check the conditions under which cards must not be flipped, and there are three of them. The first is that card must not be 
-flipped if this.busy which might represent an animation or anything like that and user is not allowed to click on anything until this is finished. 
-The second is an unallowed click on cards that are already matched and lay face-up and a further click would run the flipCard function. 
-The third case is an unallowed click on a card that is already flipped waiting face up to be matched.
-
-So if all three statements are false the function returns 'true' and user can flip cards. Or, vice versa, if any of these statements are true, the function will return false and cards 
-cannot be flipped.
-
-
-
-The shuffle algorithm is based on pseudo-code...and also explained well here by Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 31:07 min) 
-although slightly different as shuffle() is wrapped inside an extra pair of parenthesis which makes it into a 
-IIFE=Immediately Invoked Function Expression which means that function will be executed right after its definition. 
-
-
-
-
 
 2. Persisting bugs
 
 
 - bell sound when cards matched sounds irregularly only;
 - Game Start overlay on mobile device not fully responsive;
+- customized cursor icon does show in the GitPod version but fails to show in deployed version, but no error shown.
 - sound and mute button do not work yet as I failed to link up the JS for these buttons to target my bgMusic which is always already playing when user clicks on Game Start overlay.
 The mute() and playPause() functions I coded both started the background music (the mute button on second click) in a second loop over that already playing and 
 in the end I failed to solve the issue before submission was due.
@@ -581,27 +554,37 @@ from this [2011 issue of AmstatNews](https://magazine.amstat.org/blog/2011/09/01
 
 ### 7.3. Ackowledgments
 
-Memory game tutorials on the web, especially by [WebDevSimplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) 
-and [PortEXE](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) were a tremendous help. PortEXE does a great job explaining the Fisher-Yates algorithm, for instance, as well as a number of 
-other  
+* Memory game tutorials on the web, especially by [WebDevSimplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) 
+and [PortEXE](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) were a tremendous help. PortEXE does a great job explaining the suffle function based on the Fisher-Yates algorithm, for instance.
+ The functions loops backwards through array with n cases from the 
+    last element (n-1) down to the first (1), and for each  iteration a random integer is created which is greater than/equal to 0 and less than or equal to i which is what 
+    I am using to iterate through the array. And then the random item in the array is exchanged with the one I am currently on - they are switched or shuffled.
+    Due to looping backwards through the array, it is not i++ but i--
 
-I was further inspired by Sandra [Israel-Ovirih's](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) and Marina [Ferreira's](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) 
+Similar path is taken by Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 31:07 min), also using CSS grid property 'order' and Math.random()  
+although slightly different as shuffle() is wrapped inside an extra pair of parenthesis which makes it into a 
+IIFE=Immediately Invoked Function Expression which means that function will be executed right after its definition. 
+
+
+
+
+* I was further inspired by Sandra [Israel-Ovirih's](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) and Marina [Ferreira's](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) 
 tutorials which provided helpful explanations.
 
-Page redirect between index.html and prize.html in JS was taken from [tutorialrepublic](https://www.tutorialrepublic.com/faq/how-to-redirect-to-another-web-page-using-jquery.php) and edited to suit my needs.
+* Page redirect between index.html and prize.html in JS was taken from [tutorialrepublic](https://www.tutorialrepublic.com/faq/how-to-redirect-to-another-web-page-using-jquery.php) and edited to suit my needs.
 
 
-Centering the mute and play buttons horizontally and vertically is inspired by [w3schools](https://www.w3schools.com/howto/howto_css_center_button.asp), whilst the JS for both buttons to function
-properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?v=hsSXzdn_0Gg) and edited to fit my code.
+* Centering the mute and play buttons horizontally and vertically is inspired by [w3schools](https://www.w3schools.com/howto/howto_css_center_button.asp).
 
-The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
-Thanks also to tutors Samantha Dartnell, Alan McGee, and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, to Tim Nelson for 
+* The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
+
+* Thanks also to tutors Samantha Dartnell, Alan McGee, and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, to Tim Nelson for 
 for invaluable help in solving 404 errors of my sound files, and to Johann Alberts
 for giving me the right clues for solving CSS issues with cursor and portrait gallery in prize.html. Thanks also to my fellow students on Slack,
 especially those who also coded memory games in the past.
 
-A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
+* A special thank to my mentor [Adegbenga Adeye](https://github.com/deye9) for commenting on earlier versions of my code and especially for going through some tricky JS issues with me.
 
 
 
