@@ -596,7 +596,8 @@ properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?
 
 The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
-Thanks also to tutors Samantha Dartnell, Alan McGee, and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, and to Johann Alberts
+Thanks also to tutors Samantha Dartnell, Alan McGee, and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, to Tim Nelson for 
+for invaluable help in solving 404 errors of my sound files, and to Johann Alberts
 for giving me the right clues for solving CSS issues with cursor and portrait gallery in prize.html. Thanks also to my fellow students on Slack,
 especially those who also coded memory games in the past.
 

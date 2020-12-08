@@ -141,7 +141,7 @@ transform: scale(1);
 
 .card:hover {
 
- cursor: url("../cursors/female-icon-mini.png"), auto;
+ cursor: url("../cursors/female-icon-mini.png");
  
  }
 
