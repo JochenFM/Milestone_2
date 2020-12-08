@@ -125,8 +125,8 @@ more informative and appealing to the user than a 'prize' overlay with a link to
 - [x] **Flip counter**: counts the number of flips a user has made, allowing them to track their progress and compete for the lowest number of flips.
 - [x] **Timer**: displays the time remaining for the user to complete the game.
 - [x] **Game board**: displays the game cards face down ready to be clicked.
-- [x] **Game cards**: interactive on hover on the card back, their card face contains the portrait images to be matched by the user to win the game. Upon match, the name of the 
-matched statisticians appears.
+- [x] **Game cards**: interactive on hover on the card back, their card face contains the portrait images to be matched by the user to win the game. 
+
 
 
 *sounds*
@@ -155,7 +155,7 @@ a link for further information about the respective person.
 - [ ] Add difficulty levels for the user to choose from (easy, medium, hard) with more cards and/or less time to complete the game. 
 - [ ] Star rating (from 1–3) that reflects the player’s performance based on number of moves made.
 - [ ] Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
-- [ ] The animated image overlay which is currently onmouseover in JS was originally planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
+- [ ] An animated image overlay which is currently onmouseover in JS was originally planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
 with which I planned to target the overlay, but I found this too difficult to implement within the time at hand, especially because sixteen cards needed to be matched into pairs and thus animated, and the imagecaption overlay
 needed to be undone after every game over or victory.
 - [ ] Make mute button functional via JS which will allow player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
@@ -595,8 +595,6 @@ Centering the mute and play buttons horizontally and vertically is inspired by [
 properly was inspired by Adam Khoury's [tutorial](https://www.youtube.com/watch?v=hsSXzdn_0Gg) and edited to fit my code.
 
 The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
-
-Animated image overlay on matched cards was inspired by [cssscript](https://www.cssscript.com/animated-image-hover-overlay-with-image-scale/) and edited to suit my needs. 
 
 Thanks also to tutors Samantha Dartnell, Alan McGee, and Michael Park for going with me through the play/pause and un/mute functions in JS even although issues persisted, and to Johann Alberts
 for giving me the right clues for solving CSS issues with cursor and portrait gallery in prize.html. Thanks also to my fellow students on Slack,
