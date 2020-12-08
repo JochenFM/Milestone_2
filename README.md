@@ -98,13 +98,13 @@ to the user: you are out.
 
 *Wireframes*
 
-I used Balsamiq to create three wireframes, for desktop, tablet, and mobile:
+I used Balsamiq to create three wireframes, for [mobile](https://imgur.com/eyThfG1), [tablet](https://imgur.com/09t0hEw), and desktop, which can be seen here:
 
 
 
 ![Balsamiq wireframe](assets/wireframes/trailblazers_desktop.png)
-![Balsamiq wireframes](assets/wireframes/trailblazers_tablet.png)
-![Balsamiq wireframes](assets/wireframes/trailblazers_mobile.png)
+
+
 
 
 As can be seen, the 'game over' overlay was added for the desktop view whilst the 'click to start' as well as the 'victory' and 'prize' overlays were sketched out 
@@ -364,12 +364,6 @@ The application was tested across Google Chrome, Firefox, Microsoft Edge, Explor
 
 Developer tools in Chrome were also used during the creation phases for the various viewport sizes.
 
-Here are some of the 
-
-
-
-
-
 
 *Game Functionality*
 
@@ -446,8 +440,6 @@ Music would not start playing in neither of them.
 All of these issues except the music issue, were resolved by moving the _script src="assets/js/script.js" async></script_
 from the header of the HTML pages to below the footer inside the body tag.
 
-In MS Explorer, game would not even start and all cards were aligned in one single row.
-
 
 
 In the coding process, I encountered a number of minor bugs such as absent 
@@ -461,10 +453,7 @@ pauseMusic() {
         bgMusic.pause();
     }
 
-in my AudioController class 
-
-
-Always use the "new" keyword whenever you want to use a method within a class
+in my AudioController class to the effect that 
 
 
 
@@ -472,7 +461,7 @@ Always use the "new" keyword whenever you want to use a method within a class
 Here are some of the more substantial bugs I encountered and my approach to fix them:
 
  
-- used getElementsByClassName without supplying index until I noticed and added [0] to the end of className. I must be [0] as it is a zero-index starting with 0, 
+- used to getElementsByClassName without supplying index until I noticed and added [0] to the end of className. It must be [0] as it is a zero-index starting with 0, 
 targeting only 1 card:  
 
 getCardType(card) {
@@ -506,12 +495,11 @@ IIFE=Immediately Invoked Function Expression which means that function will be e
 2. Persisting bugs
 
 
-- bell sound when cards matched sounds irregularly;
-
-
-
-
-
+- bell sound when cards matched sounds irregularly only;
+- Game Start overlay on mobile device not fully responsive;
+- sound and mute button do not work yet as I failed to link up the JS for these buttons to target my bgMusic which is always already playing when user clicks on Game Start overlay.
+The mute() and playPause() functions I coded both started the background music (the mute button on second click) in a second loop over that already playing and 
+in the end I failed to solve the issue before submission was due.
 
 
 
