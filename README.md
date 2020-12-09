@@ -72,7 +72,7 @@ is also reflected in the jolly background music.
 For the back of the cards, I chose two icons which represent the topic as best as possible: the gender symbol for female and the 'bell curve', a visualisation of the 
 normal distribution for a variable. The term 'bell curve' originates from the fact that the graph used to depict a normal distribution consists of a symmetrical bell-shaped curve. 
 Since both icons represent the respective field this game is about - women and statistics - in a common and popular way, I felt they should go on the back of the cards.
-Cursor icon...
+Custom cursor icon takes up the female symbol on hover over the cards. 
 
 
 *Typography*
@@ -187,6 +187,8 @@ and diagnose problems.
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse) to test the performance of the website.
 
 * [AmiResponsiveDesign](http://ami.responsivedesign.is) to test responsive design on various devices.
+
+* [Autoprefixer](https://autoprefixer.github.io/) to ensure vendor prefixes for all broswers were added.
 
 *  Mute/unmute and play/pause icons, as well as bell curve on back of the cards was purchased from [TheNounProject](https://thenounproject.com/).
 
@@ -437,8 +439,11 @@ In Safari and Firefox, the time ran twice as fast taking away two digits every s
 Additionally, in Safari, all cards were shown card face up (visible) by default, and in MS Edge the game would start with the wrong overlay visible. 
 Music would not start playing in neither of them.
 
-All of these issues except the music issue, were resolved by moving the _script src="assets/js/script.js" async></script_
+All of these issues were resolved by:
+-  moving the _script src="assets/js/script.js" async></script_
 from the header of the HTML pages to below the footer inside the body tag.
+
+- using Autoprefixer CSS online to add relevant vendor prefixes to CSS.
 
 
 In the coding process, I encountered a number of minor bugs such as absent 
@@ -446,11 +451,7 @@ or inconsistent camelCases, or capital letters at the beginning of a variable.
 
 As my .wav files threw 404 errors in the console, it was also important to learn that JS file paths, other than those in CSS, work better without '/' at the beginning, as JS 
 files "think" it's already in the main root-level, so one just targets direct source.
-In CSS, '../' seems least error-prone.
-
-
-Also, when coding the play/pause and un/mute functions, I initially did not insert the corresponding methods in my AudioController class to the effect that they were not called.
-
+In CSS, '../' at the beginning of file path seems least error-prone.
 
 
 Here are some of the more substantial bugs I encountered and my approach to fix them:
@@ -463,13 +464,15 @@ getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
 
 
+- When coding the play/pause and un/mute functions, I initially did not insert the corresponding methods in my AudioController class to the effect that they were not called.
+
+
 
 2. Persisting bugs
 
 
 - bell sound when cards matched sounds irregularly only;
 - Game Start overlay on mobile device not fully responsive;
-- customized cursor icon does show in the GitPod version but fails to show in deployed version, but no error shown.
 - sound and mute button do not work yet as I failed to link up the JS for these buttons to target my bgMusic which is always already playing when user clicks on Game Start overlay.
 The mute() and playPause() functions I coded both started the background music (the mute button on second click) in a second loop over that already playing and 
 in the end I failed to solve the issue before submission was due.
@@ -555,27 +558,15 @@ from this [2011 issue of AmstatNews](https://magazine.amstat.org/blog/2011/09/01
 ### 7.3. Ackowledgments
 
 * Memory game tutorials on the web, especially by [WebDevSimplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) 
-and [PortEXE](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) were a tremendous help. PortEXE does a great job explaining the suffle function based on the Fisher-Yates algorithm, for instance.
- The functions loops backwards through array with n cases from the 
-    last element (n-1) down to the first (1), and for each  iteration a random integer is created which is greater than/equal to 0 and less than or equal to i which is what 
-    I am using to iterate through the array. And then the random item in the array is exchanged with the one I am currently on - they are switched or shuffled.
-    Due to looping backwards through the array, it is not i++ but i--
+and [PortEXE](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) were a tremendous help. PortEXE does a great job explaining some of the key functions for this game such as shuffle() 
+based on the Fisher-Yates algorithm, for instance. Marina [Ferreira's](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) tutorial is also handy, especially 
+where the two deviate which helps in understanding better the underlying logic of some functions.
 
-Similar path is taken by Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 31:07 min), also using CSS grid property 'order' and Math.random()  
-although slightly different as shuffle() is wrapped inside an extra pair of parenthesis which makes it into a 
-IIFE=Immediately Invoked Function Expression which means that function will be executed right after its definition. 
-
-
-
-
-* I was further inspired by Sandra [Israel-Ovirih's](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) and Marina [Ferreira's](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) 
-tutorials which provided helpful explanations.
+* Sandra [Israel-Ovirih's](https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript) tutorial provided further helpful explanations.
 
 * Page redirect between index.html and prize.html in JS was taken from [tutorialrepublic](https://www.tutorialrepublic.com/faq/how-to-redirect-to-another-web-page-using-jquery.php) and edited to suit my needs.
 
-
 * Centering the mute and play buttons horizontally and vertically is inspired by [w3schools](https://www.w3schools.com/howto/howto_css_center_button.asp).
-
 
 * The idea for active card on click is from Marina [Ferreira](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=681s) (from 11:33min)
 
