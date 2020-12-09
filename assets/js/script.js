@@ -167,8 +167,6 @@ victory() {
 
 }
 
-
- 
     
     shuffleCards(){
 

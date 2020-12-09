@@ -155,7 +155,7 @@ a link for further information about the respective person.
 - [ ] Add difficulty levels for the user to choose from (easy, medium, hard) with more cards and/or less time to complete the game. 
 - [ ] Star rating (from 1–3) that reflects the player’s performance based on number of moves made.
 - [ ] Add modal or HTML elements to 'Victory overlay' to show user how much time he/she took, and star rating.
-- [ ] An animated image overlay which is currently onmouseover in JS was originally planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
+- [ ] An animated image overlay with captions was planned as part of the cardMatch(card1, card2) function. I had started to read up on the data-*attributes
 with which I planned to target the overlay, but I found this too difficult to implement within the time at hand, especially because sixteen cards needed to be matched into pairs and thus animated, and the imagecaption overlay
 needed to be undone after every game over or victory.
 - [ ] Make mute button functional via JS which will allow player to mute/unmute music in case his/her game is interrupted by another activity which briefly requires attention.
@@ -360,7 +360,7 @@ and will be addressed at a later stage:
 
 ### 5.2 Manual Testing
 
-The application was tested across Google Chrome, Firefox, Microsoft Edge, Explorer and Safari browsers to ensure everything worked as it should and to identify issues/bugs.
+The application was tested across Google Chrome, Firefox, Microsoft Edge, and Safari browsers to ensure everything worked as it should and to identify issues/bugs.
 
 Developer tools in Chrome were also used during the creation phases for the various viewport sizes.
 
