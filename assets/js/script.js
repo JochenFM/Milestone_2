@@ -40,6 +40,49 @@ class AudioController {
 
 
 
+//set object references
+var playbtn = document.getElementById('playpausebtn');
+var mutebtn = document.getElementById('soundbtn');
+var bgMusic = this.bgMusic
+
+
+//add event handling
+playbtn.addEventListener('click', playPause);
+mutebtn.addEventListener('click', mute);
+
+//set intial button background
+mutebtn.style.background = "url(assets/images/unmute_icon.png)";
+mutebtn.style.backgroundSize = "cover";
+
+//functions
+function playPause() { 
+    if (this.bgMusic.paused) {
+        this.bgMusic.play();
+        playbtn.style.background = "url(assets/images/pause_icon.png)";
+        playbtn.style.backgroundSize = "cover";
+
+    }
+    else {
+       this.bgMusic.pause();
+        playbtn.style.background = "url(assets/images/play_icon.png) no-repeat"; 
+       playbtn.style.backgroundSize = "cover";
+    }
+}
+
+function mute() {
+    if (this.bgMusic.muted) {
+        this.bgMusic.muted = false;
+        mutebtn.style.backgroundImage === 'url("assets/images/unmute_icon.png")' 
+        //Mute Music
+    } else { // unmute Music
+        this.bgMusic.muted = true;
+        mutebtn.style.background = "url(assets/images/mute_icon.png) no-repeat"
+        mutebtn.style.backgroundSize = "cover"
+        mutebtn.classList.add("btn", "soundOn");
+    }
+}    
+
+
 
  
 class MixOrMatch{

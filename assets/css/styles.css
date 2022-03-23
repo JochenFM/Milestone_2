@@ -123,7 +123,7 @@ border: 1px solid #E63946;
     border: solid 2px #E63946;
     border-radius: .5rem;
     outline: none;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg') no-repeat;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg) no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #F1FAEE;
@@ -132,14 +132,14 @@ border: 1px solid #E63946;
 
 
 
-#playbtn {
+#playpausebtn {
 
     height: 3rem;
     width: 3rem;
     border: solid 2px #E63946;
     border-radius: .5rem;
     outline: none;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Ic_pause_48px.svg') no-repeat;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/95/Ic_pause_48px.svg) no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #F1FAEE;
